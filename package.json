@@ -1,0 +1,41 @@
+{
+  "name": "british-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "british-library": "index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.16",
+    "airtable": "^0.10.0",
+    "brew": "0.0.8",
+    "csv-parser": "^2.3.3",
+    "dbffile": "^1.4.3",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^23.16.0",
+    "homebrew": "^0.1.0",
+    "mysql": "github:mysqljs/mysql",
+    "websocket": "^1.0.32"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node src/getData.js",
+    "debug": "babel-node debug src/getData.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazakova-liza/british-library.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kazakova-liza/british-library/issues"
+  },
+  "homepage": "https://github.com/kazakova-liza/british-library#readme"
+}
