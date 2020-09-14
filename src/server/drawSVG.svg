@@ -20,8 +20,8 @@
   <text fill="#000000" font-family="serif" font-size="24" id="svg_23" stroke="#000000" stroke-width="0" text-anchor="middle" x="314.337214" xml:space="preserve" y="195.511706">Cartons</text>
   <text fill="#000000" font-family="serif" font-size="24" id="posStyleColor" stroke="#000000" stroke-width="0" text-anchor="middle" x="337.337214" xml:space="preserve" y="222.511706">Style / Colors</text>
   <rect fill="#d4ffaa" height="91.999999" id="svg_36" stroke="#000000" stroke-width="5" width="127" x="595.666625" y="167"/>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_35" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 0.954128 0 6.74312)" x="658.00384" xml:space="preserve" y="195.329013">Eligable</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="eligbleStyleColor" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 0.954128 0 6.74312)" x="642.666625" xml:space="preserve" y="257.605769">0</text>
+  <text fill="#000000" font-family="serif" font-size="24" id="svg_35" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 0.954128 0 6.74312)" x="658.00384" xml:space="preserve" y="195.329013">Eligible</text>
+  <text fill="#000000" font-family="serif" font-size="24" id="eligibleStyleColor" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 0.954128 0 6.74312)" x="642.666625" xml:space="preserve" y="257.605769">0</text>
   <text fill="#000000" font-family="serif" font-size="24" id="svg_38" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 0.954128 0 6.74312)" x="657.326716" xml:space="preserve" y="223.457619">Style/color</text>
   <g id="svg_40" transform="rotate(1.44786 528.869 215.835)">
    <path d="m529.527337,247.082906l61.861639,-32.03435l-62.675032,-30.461287l0.203348,15.62391l-62.567959,0.790316l0.406697,31.247816l62.567959,-0.790316l0.203348,15.62391z" fill="#bfbfbf" id="svg_32" stroke="#000000" stroke-width="0"/>
@@ -60,8 +60,5 @@
   <ellipse cx="1050.094114" cy="402.142029" fill="#bfbfbf" id="svg_73" rx="51.499999" ry="27" stroke="#000000" stroke-width="0"/>
   <path d="m965.852469,400.989263l-16.757994,-63.343115l-16.757994,63.343115l8.378998,0l0,63.64791l16.757993,0l0,-63.64791l8.378998,0z" fill="#bfbfbf" id="svg_72" stroke="#000000" stroke-width="0" transform="rotate(90 949.094 401.142)"/>
   <text fill="#000000" font-family="serif" font-size="32" id="svg_71" stroke="#000000" stroke-width="0" text-anchor="middle" x="1047.127422" xml:space="preserve" y="410.942029">Affinity</text>
-  <ellipse cx="208.238608" cy="321.599419" fill="#ff0000" id="svg_74" rx="77" ry="25" stroke="#000000" stroke-width="0"/>
-  <path d="m444.014877,355.84913l17.999989,-17.939529l17.999989,17.939529l-8.999995,0l0,18.02585l-17.999988,0l0,-18.02585l-8.999995,0z" fill="#ff0000" id="svg_75" stroke="#000000" stroke-width="0"/>
-  <path d="m329.58992,357.861615l20.01924,-19.951998l20.01924,19.951998l-10.009621,0l0,20.048003l-20.019239,0l0,-20.048003l-10.009621,0z" fill="#ff0000" id="svg_76" stroke="#000000" stroke-width="0"/>
  </g>
 </svg>

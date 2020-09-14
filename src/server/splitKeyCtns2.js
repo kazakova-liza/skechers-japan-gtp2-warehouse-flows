@@ -4,76 +4,92 @@ let thisDte = ''
 let ords = []
 let cartoninfo = []
 let possibleStyleCol = []
-let eligableStyleColList = []
+let eligibleStyleColList = []
+let dayOrds;
+let possibleCtnsList;
 
+// To Do: give phases sensible names
 
-function phase1(ords, connection) {
-    const svgUpdate = [];
-    const dayOrds = ords.filter((rec) => {
+const phase1 = (ords) => {
+    let svgUpdate = [];
+    dayOrds = ords.filter((rec) => {
         return rec.dte.getTime() == thisDte.getTime();
     });
     const stats = groupBy(dayOrds, ['dte'], ['sqty'], ['carton', 'sku']);
 
-    // this.connection.sendUTF(JSON.stringify({ "topic": "tnow", "payload": this.tnow }))
     svgUpdate.push({ id: 'allLines', value: stats[0].cnt });
     svgUpdate.push({ id: 'allCtns', value: stats[0].carton_dcnt });
     svgUpdate.push({ id: 'allSkus', value: stats[0].sku_dcnt });
     svgUpdate.push({ id: 'allPairs', value: stats[0].sqty_sum });
 
-    console.log(`sending update...`);
-    connection.sendUTF(JSON.stringify({ "topic": "svgUpdate", "payload": svgUpdate }))
+    cartoninfo = groupBy(dayOrds, ['carton'], ['sqty'], ['style']);
 
-    cartoninfo = groupBy(dayOrds, ['carton'], ['sqty'], ['style'])
+    return svgUpdate;
 }
-function phase2() {
+const phase2 = () => {
+    let svgUpdate = [];
     let possibleCtns = cartoninfo.filter(rec => rec.sqty_sum > 3 && rec.style_dcnt <= 3);
-    //thingy.update('posCtns', possibleCtns.length)
+    svgUpdate.push({ id: 'posCtns', value: possibleCtns.length });
+
     possibleCtnsList = possibleCtns.map(function (obj) { return obj.carton });
-    possibleLines = dayOrds.filter(f => possibleCtnsList.includes(f.carton));
-    possibleStyleCol = groupBy(possibleLines, ['styleCol'], ['sqty'], ['carton'])
-    //thingy.update('posStyleColors', possibleStyleCol.length)
+    const possibleLines = dayOrds.filter(f => possibleCtnsList.includes(f.carton));
+    possibleStyleCol = groupBy(possibleLines, ['styleCol'], ['sqty'], ['carton']);
+
+    svgUpdate.push({ id: 'svg_27', value: possibleStyleCol.length });
+
+    return svgUpdate;
+
 }
 
-function phase3() {
-    let eligableStyleCol = possibleStyleCol.filter(rec => rec.sqty_sum > 250);
-    //thingy.update('eligbleStyleColor', eligableStyleCol.length)
-    eligableStyleColList = eligableStyleCol.map(function (obj) { return obj.styleCol });
+const phase3 = () => {
+    let svgUpdate = [];
+    let eligibleStyleCol = possibleStyleCol.filter(rec => rec.sqty_sum > 250);
+    svgUpdate.push({ id: 'eligibleStyleColor', value: eligibleStyleCol.length });
+
+    eligibleStyleColList = eligibleStyleCol.map(function (obj) { return obj.styleCol });
+
+    return svgUpdate;
 }
 
-function phase4() {
+const phase4 = () => {
+    let svgUpdate = [];
     //find ctns with stles not in this list
-    notEligableLines = dayOrds.filter(f => !eligableStyleColList.includes(f.styleCol));
-    console.log('notEligableLines = ', notEligableLines.length)
-    notEligableCarton = notEligableLines.map(function (obj) {
+    const notEligibleLines = dayOrds.filter(f => !eligibleStyleColList.includes(f.styleCol));
+    console.log('notEligibleLines = ', notEligibleLines.length)
+    const notEligibleCarton = notEligibleLines.map(function (obj) {
         return obj.carton;
     });
-    //remove these from eligable cartons
-    eligableCartonList = possibleCtnsList.filter(f => !notEligableCarton.includes(f));
-    console.log('eligableCartonList = ', eligableCartonList.length)
+    //remove these from eligible cartons
+    const eligibleCartonList = possibleCtnsList.filter(f => !notEligibleCarton.includes(f));
+    console.log('eligibleCartonList = ', eligibleCartonList.length)
     //get orders for these ctns
-    keyOrdLines = dayOrds.filter(f => eligableCartonList.includes(f.carton));
+    const keyOrdLines = dayOrds.filter(f => eligibleCartonList.includes(f.carton));
 
-    forDB = keyOrdLines.map(function (obj) {
+    let forDB = keyOrdLines.map(function (obj) {
         return [obj.dte, obj.carton, obj.sku, obj.sqty];
     });
 
 
-    activeLines = dayOrds.filter(f => !eligableCartonList.includes(f.carton));
+    const activeLines = dayOrds.filter(f => !eligibleCartonList.includes(f.carton));
     console.log('activeLines = ', activeLines.length)
     forDB = activeLines.map(function (obj) {
         return [obj.dte, obj.carton, obj.sku, obj.sqty];
     });
 
-    stats = groupBy(keyOrdLines, ['dte'], ['sqty'], ['carton', 'sku'])
-    //thingy.update('keyLines', stats[0].cnt)
-    //thingy.update('keyCtns', stats[0].carton_dcnt)
-    //thingy.update('keySkus', stats[0].sku_dcnt)
-    //thingy.update('keyPairs', stats[0].sqty_sum)
-    stats = groupBy(activeLines, ['dte'], ['sqty'], ['carton', 'sku'])
-    //thingy.update('activeLines', stats[0].cnt)
-    //thingy.update('activeCtns', stats[0].carton_dcnt)
-    //thingy.update('activeSkus', stats[0].sku_dcnt)
-    //thingy.update('activePairs', stats[0].sqty_sum)
+    const stats1 = groupBy(keyOrdLines, ['dte'], ['sqty'], ['carton', 'sku']);
+    console.log(`stats1: ${stats1} `)
+    svgUpdate.push({ id: 'keyLines', value: stats1[0].cnt });
+    svgUpdate.push({ id: 'keyCtns', value: stats1[0].carton_dcnt });
+    svgUpdate.push({ id: 'keySkus', value: stats1[0].sku_dcnt });
+    svgUpdate.push({ id: 'keyPairs', value: stats1[0].sqty_sum });
+
+    const stats2 = groupBy(activeLines, ['dte'], ['sqty'], ['carton', 'sku']);
+    svgUpdate.push({ id: 'activeLines', value: stats2[0].cnt });
+    svgUpdate.push({ id: 'activeCtns', value: stats2[0].carton_dcnt });
+    svgUpdate.push({ id: 'activeSkus', value: stats2[0].sku_dcnt });
+    svgUpdate.push({ id: 'activePairs', value: stats2[0].sqty_sum });
+
+    return svgUpdate;
 
 }
 
@@ -89,10 +105,17 @@ const execute = (ords, connection) => {
     for (var dte of dtes) {
         thisDte = dte.dte;
         console.log(thisDte)
-        phase1(ords, connection);
-        // phase2()
-        // phase3()
-        // phase4()
+        const svgUpdate1 = phase1(ords);
+        connection.sendUTF(JSON.stringify({ "topic": "svgUpdate", "payload": svgUpdate1 }));
+
+        const svgUpdate2 = phase2();
+        connection.sendUTF(JSON.stringify({ "topic": "svgUpdate", "payload": svgUpdate2 }));
+
+        const svgUpdate3 = phase3();
+        connection.sendUTF(JSON.stringify({ "topic": "svgUpdate", "payload": svgUpdate3 }));
+
+        const svgUpdate4 = phase4();
+        connection.sendUTF(JSON.stringify({ "topic": "svgUpdate", "payload": svgUpdate4 }));
     }
 
     const t2 = Date.now()
