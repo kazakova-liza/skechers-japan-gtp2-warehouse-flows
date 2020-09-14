@@ -67,6 +67,7 @@ const main = async () => {
 
       let command;
       let data;
+      let ords;
 
       try {
         command = JSON.parse(message.utf8Data);
@@ -80,23 +81,24 @@ const main = async () => {
         connection.sendUTF(JSON.stringify({ topic: 'inputs', payload: objects.inputs }));
       }
       if (command.topic === 'start') {
-        data = await getData(command.payload);
-        cache.data = data;
         cache.currentPhase = 1;
         cache.currentPeriod = 0;
         console.log(cache.currentPhase);
-        execute(data, connection, cache.currentPhase, cache.currentPeriod);
+        const svgUpdate = [{ id: 'phase', value: 'getting orders...' }];
+        connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate }));
+        cache.ords =  await getData(command.payload);
+        await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
       }
       if (command.topic === 'phase++') {
         cache.currentPhase++;
         console.log(cache.currentPhase);
-        execute(cache.data, connection, cache.currentPhase, cache.currentPeriod);
+        await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
       }
       if (command.topic === 'period++') {
         cache.currentPhase = 1;
         cache.currentPeriod++;
         console.log(cache.currentPeriod);
-        execute(cache.data, connection, cache.currentPhase, cache.currentPeriod);
+        await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
       }
     });
 

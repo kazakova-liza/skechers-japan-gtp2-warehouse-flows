@@ -32,37 +32,37 @@
   <path d="m797.92462,67.337997l-16.757994,-67.333515l-16.757994,67.333515l8.378997,0l0,67.657511l16.757993,0l0,-67.657511l8.378997,0z" fill="#bfbfbf" id="svg_44" stroke="#000000" stroke-width="0" transform="rotate(77.2063 781.167 67.5)"/>
   <path d="m1159.42462,209.447208l-16.757994,-21.942722l-16.757994,21.942722l8.378997,0l0,22.048306l16.757993,0l0,-22.048306l8.378997,0z" fill="#bfbfbf" id="svg_45" stroke="#000000" stroke-width="0"/>
   <path d="m430.425017,84.895985l-16.757994,-250.891897l-16.757994,250.891897l8.378998,0l0,252.099142l16.757993,0l0,-252.099142l8.378998,0z" fill="#bfbfbf" id="svg_46" stroke="#000000" stroke-width="0" transform="rotate(90 413.667 85.4996)"/>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_47" stroke="#000000" stroke-width="0" text-anchor="middle" x="903.162665" xml:space="preserve" y="168.496081">SKUs</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_48" stroke="#000000" stroke-width="0" text-anchor="middle" x="902.003851" xml:space="preserve" y="138.011706">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_49" stroke="#000000" stroke-width="0" text-anchor="middle" x="901.003851" xml:space="preserve" y="105.011706">Lines</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_50" stroke="#000000" stroke-width="0" text-anchor="middle" x="901.003851" xml:space="preserve" y="75.011706">Cartons</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_51" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="927.003851" xml:space="preserve" y="45.011706">Key orders</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="keySkus" stroke="#000000" stroke-width="0" text-anchor="middle" x="974.666636" xml:space="preserve" y="166.5">0</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="keyPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="974.666636" xml:space="preserve" y="138.5">0</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="keyLines" stroke="#000000" stroke-width="0" text-anchor="middle" x="973.666636" xml:space="preserve" y="100.5">0</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="keyCtns" stroke="#000000" stroke-width="0" text-anchor="middle" x="974.666636" xml:space="preserve" y="76.5">0</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="svg_47" stroke="#000000" stroke-width="0" text-anchor="middle" x="903.162665" xml:space="preserve" y="168.496081">SKUs</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="svg_48" stroke="#000000" stroke-width="0" text-anchor="middle" x="902.003851" xml:space="preserve" y="138.011706">Pairs</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="svg_49" stroke="#000000" stroke-width="0" text-anchor="middle" x="901.003851" xml:space="preserve" y="105.011706">Lines</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="svg_50" stroke="#000000" stroke-width="0" text-anchor="middle" x="901.003851" xml:space="preserve" y="75.011706">Cartons</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_51" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="927.003851" xml:space="preserve" y="45.011706">Key orders</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="keySkus" stroke="#000000" stroke-width="0" text-anchor="middle" x="974.666636" xml:space="preserve" y="166.5">0</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="keyPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="974.666636" xml:space="preserve" y="138.5">0</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="keyLines" stroke="#000000" stroke-width="0" text-anchor="middle" x="973.666636" xml:space="preserve" y="100.5">0</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="keyCtns" stroke="#000000" stroke-width="0" text-anchor="middle" x="974.666636" xml:space="preserve" y="76.5">0</text>
   <path d="m236.935605,154.176686l-31.250387,-61.3482l-31.250387,61.3482l15.625195,0l0,61.643396l31.250385,0l0,-61.643396l15.625195,0z" fill="#bfbfbf" id="svg_18" stroke="#000000" stroke-width="0" transform="rotate(120.107 205.686 154.324)"/>
   <text fill="#000000" font-family="serif" font-size="24" id="svg_17" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(30.8416 214.445 147.742)" x="214.450627" xml:space="preserve" y="155.743864">3+Pairs</text>
   <text fill="#000000" font-family="serif" font-size="24" id="svg_19" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(30.8416 203.566 163.57)" x="203.568553" xml:space="preserve" y="171.5697">3-styles</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_58" stroke="#000000" stroke-width="0" text-anchor="middle" x="378.667902" xml:space="preserve" y="157.996081">Possible Style / Colors</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_58" stroke="#000000" stroke-width="0" text-anchor="middle" x="378.667902" xml:space="preserve" y="157.996081">Possible Style / Colors</text>
   <path d="m777.033072,206.27967l-16.757994,-114.499102l-16.757994,114.499102l8.378997,0l0,115.05005l16.757993,0l0,-115.05005l8.378997,0z" fill="#bfbfbf" id="svg_59" stroke="#000000" stroke-width="0" transform="rotate(154.548 760.275 206.555)"/>
   <rect fill="#d4ffaa" height="189" id="svg_69" stroke="#000000" stroke-width="5" width="150" x="734.699961" y="307.299988"/>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_68" stroke="#000000" stroke-width="0" text-anchor="middle" x="786.19599" xml:space="preserve" y="462.296068">SKUs</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_67" stroke="#000000" stroke-width="0" text-anchor="middle" x="785.037176" xml:space="preserve" y="431.811693">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_66" stroke="#000000" stroke-width="0" text-anchor="middle" x="784.037176" xml:space="preserve" y="398.811693">Lines</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_65" stroke="#000000" stroke-width="0" text-anchor="middle" x="784.037176" xml:space="preserve" y="368.811693">Cartons</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_64" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="810.037176" xml:space="preserve" y="338.811693">Active orders</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="activeSkus" stroke="#000000" stroke-width="0" text-anchor="middle" x="857.699961" xml:space="preserve" y="460.299988">0</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="active Pairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="857.699961" xml:space="preserve" y="432.299988">0</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="activeLines" stroke="#000000" stroke-width="0" text-anchor="middle" x="857.699961" xml:space="preserve" y="398.299988">0</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="activeCtns" stroke="#000000" stroke-width="0" text-anchor="middle" x="857.699961" xml:space="preserve" y="370.299988">0</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="svg_68" stroke="#000000" stroke-width="0" text-anchor="middle" x="786.19599" xml:space="preserve" y="462.296068">SKUs</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="svg_67" stroke="#000000" stroke-width="0" text-anchor="middle" x="785.037176" xml:space="preserve" y="431.811693">Pairs</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="svg_66" stroke="#000000" stroke-width="0" text-anchor="middle" x="784.037176" xml:space="preserve" y="398.811693">Lines</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="svg_65" stroke="#000000" stroke-width="0" text-anchor="middle" x="784.037176" xml:space="preserve" y="368.811693">Cartons</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_64" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="810.037176" xml:space="preserve" y="338.811693">Active orders</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="activeSkus" stroke="#000000" stroke-width="0" text-anchor="middle" x="857.699961" xml:space="preserve" y="460.299988">0</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="active Pairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="857.699961" xml:space="preserve" y="432.299988">0</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="activeLines" stroke="#000000" stroke-width="0" text-anchor="middle" x="857.699961" xml:space="preserve" y="398.299988">0</text>
+  <text fill="#000000" font-family="serif" font-size="20" id="activeCtns" stroke="#000000" stroke-width="0" text-anchor="middle" x="857.699961" xml:space="preserve" y="370.299988">0</text>
   <text fill="#000000" font-family="serif" font-size="32" id="svg_70" stroke="#000000" stroke-width="0" text-anchor="middle" x="671.7" xml:space="preserve" y="95.3">Split</text>
   <ellipse cx="1050.094114" cy="402.142029" fill="#bfbfbf" id="svg_73" rx="51.499999" ry="27" stroke="#000000" stroke-width="0"/>
   <path d="m965.852469,400.989263l-16.757994,-63.343115l-16.757994,63.343115l8.378998,0l0,63.64791l16.757993,0l0,-63.64791l8.378998,0z" fill="#bfbfbf" id="svg_72" stroke="#000000" stroke-width="0" transform="rotate(90 949.094 401.142)"/>
   <text fill="#000000" font-family="serif" font-size="32" id="svg_71" stroke="#000000" stroke-width="0" text-anchor="middle" x="1047.127422" xml:space="preserve" y="410.942029">Affinity</text>
-    <text fill="#000000" font-family="serif" font-size="24" id="svg_87" stroke="#000000" stroke-width="0" text-anchor="middle" x="57.5" xml:space="preserve" y="36.5">Period</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="period" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="118.502604" xml:space="preserve" y="35.5">0</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_90" stroke="#000000" stroke-width="0" text-anchor="middle" x="281.664063" xml:space="preserve" y="36">Phase</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="phase" stroke="#000000" stroke-width="0" text-anchor="middle" x="333.666667" xml:space="preserve" y="37">0</text>
+    <text fill="#000000" font-family="serif" font-size="24" id="svg_87" stroke="#000000" stroke-width="0" text-anchor="middle" x="57.5" xml:space="preserve" y="36.5">Period:</text>
+  <text fill="#000000" font-family="serif" font-size="22" id="period" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="200.502604" xml:space="preserve" y="35.5"></text>
+  <text fill="#000000" font-family="serif" font-size="24" id="svg_90" stroke="#000000" stroke-width="0" text-anchor="middle" x="350.664063" xml:space="preserve" y="36">Phase:</text>
+  <text fill="#000000" font-family="serif" font-size="22" id="phase" stroke="#000000" stroke-width="0" text-anchor="middle" x="520.666667" xml:space="preserve" y="37"></text>
  </g>
 </svg>
