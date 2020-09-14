@@ -19,6 +19,7 @@
     "eslint-plugin-jest": "^23.16.0",
     "homebrew": "^0.1.0",
     "mysql": "github:mysqljs/mysql",
+    "util": "^0.12.3",
     "websocket": "^1.0.32"
   },
   "devDependencies": {},

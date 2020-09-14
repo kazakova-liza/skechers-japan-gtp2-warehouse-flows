@@ -2,6 +2,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.11/svg.min.js"></script>
 <script src="https://cdn.rawgit.com/ariutta/svg-pan-zoom/master/dist/svg-pan-zoom.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jsframe.js/lib/jsframe.min.js"></script>
+
 <!-- <script type="module" src="http://localhost:9615/src/client/dates.js"></script> -->
 
 <html>
@@ -11,9 +12,24 @@
 </head>
 
 <body>
+  <p id='inputs'> </p>
+  <br>
   <button onclick="onStartClick()"> start </button>
   <button onclick="onStopClick()"> stop </button>
-  <svg id="svg1" width="1000" height="800" />
+  <button onclick="onPhaseClick()"> phase++ </button>
+  <button onclick="onPeriodClick()"> period++ </button>
+
+  <object type="image/svg+xml" data="http://localhost:9615/src/server/drawSVG.svg" id="svg1"> </object>
+
+  <!-- <script>
+
+    var a = document.getElementById("svg1");
+    a.addEventListener("load", function () {
+      var svgDoc = a.contentDocument;
+      svgDoc.getElementById("svg_4").style.fill='yellow';
+      svgDoc.getElementById("helloID").innerHTML = 'ffffffffffffff';
+    }, false);
+  </script> -->
 </body>
 
 <script src="http://localhost:9615/src/client/runClient.js"></script>

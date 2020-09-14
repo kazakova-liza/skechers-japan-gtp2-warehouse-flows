@@ -1,9 +1,11 @@
-import http from 'http';
-import url from 'url';
-import fs from 'fs';
-import path from 'path';
-import websocket from 'websocket';
-import get from './getter.js';
+import http from 'http'
+import url from 'url'
+import fs from 'fs'
+import path from 'path'
+import websocket from 'websocket'
+import objects from './objects.js'
+import getData from './sql/getData.js'
+import execute from './splitKeyCtns2.js'
 
 
 const port = 9615;
@@ -14,13 +16,17 @@ const runHttpServer = () => {
         try {
             var requestUrl = url.parse(request.url);
             let normalizedPath = path.normalize(requestUrl.pathname);
-            // if (normalizedPath.includes('index.html') || normalizedPath === '\\') {
-            //     normalizedPath = '//src//client//index.html';
-            // }
+            //  if (normalizedPath.includes('index.html') || normalizedPath === '\\') {
+            //      normalizedPath = '//src//client//index.html';
+            //  }
             if (normalizedPath.includes('index.html') || normalizedPath === '/') {
                 normalizedPath = '/src/client/index.html';
             }
+            if (normalizedPath.includes('.svg')) {
+                response.setHeader('Content-Type', 'image/svg+xml');
+            }
             var fsPath = `${baseDirectory}${normalizedPath}`;
+            console.log(fsPath)
             var fileStream = fs.createReadStream(fsPath)
             fileStream.pipe(response)
             fileStream.on('open', function () {
@@ -60,6 +66,7 @@ const main = async () => {
             console.log('Received Message:', message.utf8Data);
 
             let command;
+            let data;
             try {
                 command = JSON.parse(message.utf8Data);
             } catch (err) {
@@ -67,12 +74,17 @@ const main = async () => {
                 console.log("Command is not a JSON, skipping");
                 return;
             }
-
-            if (command.topic == 'start') { 
-                await experimentExecutor.start(command.experimentId, command.date, command.table) }
             if (command.topic == 'stop') { experimentExecutor.stop() }
-            if (command.topic == 'buttons') { 
-                console.log(get('buttons')) 
+            if (command.topic == 'inputs') {
+                connection.sendUTF(JSON.stringify({ "topic": "inputs", "payload": objects.inputs }));
+            }
+            if (command.topic == 'data') {
+                data = await getData(command.payload);
+                console.log(data);
+            }
+            if (command.topic == 'start') {
+                data = await getData(command.payload);
+                execute(data, connection);
             }
 
         });
