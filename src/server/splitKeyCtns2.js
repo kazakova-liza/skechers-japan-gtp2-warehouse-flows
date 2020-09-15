@@ -59,7 +59,7 @@ const execute = (ords, connection, phase, period) => {
 
             if (phase === 4) {
                 const svgUpdate4 = splitCartons();
-                console.log(cache.eligibleStyleColList);
+
                 const htmlUpdate4 = [{ id: 'period', value: dtes[i].dte.toDateString() },
                 { id: 'phase', value: 'split cartons' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate4 }));
@@ -67,7 +67,6 @@ const execute = (ords, connection, phase, period) => {
             }
             if (phase === 5) {
                 const svgUpdate5 = affinityprep();
-                console.log(cache.eligibleStyleColList);
                 const htmlUpdate5 = [{ id: 'period', value: dtes[i].dte.toDateString() },
                 { id: 'phase', value: 'Affinity martrix ready' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate5 }));
