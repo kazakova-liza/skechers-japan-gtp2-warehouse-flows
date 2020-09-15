@@ -11,7 +11,7 @@ const findPossibleCartons = () => {
     cache.possibleStyleCol = groupBy(possibleLines, ['styleCol'], ['sqty'], ['carton']);
     console.log(cache.possibleStyleCol);
 
-    svgUpdate.push({ id: 'style/colors', value: cache.possibleStyleCol.length });
+    svgUpdate.push({ id: 'posStyleCol', value: cache.possibleStyleCol.length });
 
     return svgUpdate;
 };

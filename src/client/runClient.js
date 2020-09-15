@@ -71,6 +71,17 @@ ws.onmessage = function (e) {
         }
     }
 
+    if (message.topic == 'setToNought') {
+        console.log(message);
+        const a = document.getElementById('svg1');
+        const svgDoc = a.contentDocument;
+        const elements = svgDoc.getElementsByClassName('variable');
+        console.log(elements);
+        for (const element of elements) {
+            element.textContent = 0;
+        }
+    }
+
     if (message.topic == 'htmlUpdate') {
         console.log(message);
         for (element of message.payload) {

@@ -7,7 +7,8 @@ const getInventory = () => {
     cache.cases = cache.cases.filter(rck => { if (rck.qty > 0) { return true } else { return false } })
     for (var rack of cache.cases) { rackQtyStart += rack.qty }
     cache.rackSkus = groupBy(cache.cases, ['sku'], ['qty'], [])
-    svgUpdate.push({ id: 'inventory', value: rackQtyStart });
+    svgUpdate.push({ id: 'invStartPairs', value: rackQtyStart });
+    svgUpdate.push({ id: 'invStartCases', value: cache.cases.length });
     return svgUpdate;
 }
 

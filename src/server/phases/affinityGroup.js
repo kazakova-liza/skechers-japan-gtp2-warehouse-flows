@@ -54,7 +54,20 @@ const affinityGroup = () => {
     cache.ords2.sort((a, b) => { return a.sku.localeCompare(b.sku) || a.putGrp - b.putGrp });
     const affRes = groupBy(cache.ords2, ['putGrp'], ['sqty'], ['carton', 'sku'])
     //need to display average line, skus, cartons per group from affRes
-    svgUpdate.push({ id: 'zzzz', value: cache.ords2.length });
+    var stats = affRes.reduce((stats, grp) => {
+        stats.grps ++
+        stats.skus+= grp.sku_dcnt
+        stats.ctns += grp.carton_dcnt
+        stats.qty += grp.sqty_sum
+        stats.lines += grp.cnt
+        return stats
+      }, {"grps":0, "skus":0, "ctns":0, "qty":0, "lines":0});
+
+    svgUpdate.push({ id: 'groups', value: stats.grps });
+    svgUpdate.push({ id: 'groupAvgLines', value: (stats.lines / stats.grps).toFixed(1) });
+    svgUpdate.push({ id: 'groupAvgCartons', value: (stats.ctns / stats.grps).toFixed(1) });
+    svgUpdate.push({ id: 'groupAvgSkus', value: (stats.skus / stats.grps).toFixed(1) });
+    svgUpdate.push({ id: 'groupAvgPairs', value: (stats.qty / stats.grps).toFixed(1) });
     return svgUpdate;
 }
 

@@ -55,13 +55,6 @@ const runWebSocketServer = () => {
     return wsServer;
 };
 
-// const onPeriodUpdate = [{ id: , value: 0 },
-// { id: , value: 0 },
-// { id: , value: 0 },
-// { id: , value: 0 },
-// { id: , value: 0 },
-// { id: , value: 0 },
-// ]
 
 const main = async () => {
     const wsServer = runWebSocketServer();
@@ -103,6 +96,7 @@ const main = async () => {
             if (command.topic === 'period++') {
                 cache.currentPhase = 1;
                 cache.currentPeriod++;
+                connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
                 await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
             }
         });

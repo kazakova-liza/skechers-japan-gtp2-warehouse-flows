@@ -59,19 +59,14 @@ const execute = (ords, connection, phase, period) => {
 
             if (phase === 4) {
                 const svgUpdate4 = splitCartons();
-
                 const htmlUpdate4 = [{ id: 'period', value: dtes[i].dte.toDateString() },
                 { id: 'phase', value: 'split cartons' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate4 }));
                 connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate4 }));
             }
             if (phase === 5) {
-<<<<<<< HEAD
-                const svgUpdate5 = affinityprep();
-=======
                 const svgUpdate5 = affinityPrep();
                 console.log(cache.eligibleStyleColList);
->>>>>>> c449863e177100899acf0f04fc3576709eb25c25
                 const htmlUpdate5 = [{ id: 'period', value: dtes[i].dte.toDateString() },
                 { id: 'phase', value: 'Affinity martrix ready' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate5 }));
