@@ -18,8 +18,8 @@ const makeReplens = () => {
         for (var i = 1; i <= rplnCtns; i++) {
             while (usedRacks.includes(incRackNum)) incRackNum++
 
-            cache.cases.push({ "rackNum": incRackNum, "sku": sku.sku, "qty": 6, "dteUsed": thisDte })
-            todayreplens.push([thisDte, sku.sku, 6, incRackNum])
+            cache.cases.push({ "rackNum": incRackNum, "sku": sku.sku, "qty": 6, "dteUsed": cache.thisDte })
+            todayreplens.push([cache.thisDte, sku.sku, 6, incRackNum])
             incRackNum++
         }
     }
