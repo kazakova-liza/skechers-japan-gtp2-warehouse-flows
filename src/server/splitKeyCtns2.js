@@ -2,10 +2,10 @@ import groupBy from './utils/groupBy.js';
 import cache from './cache.js';
 import getOrders from './phases/getOrders.js'
 import findPossibleCartons from './phases/findPossibleCartons.js'
-import listEligibleStyleColor from './phases/findPossibleCartons.js'
+import listEligibleStyleColor from './phases/listEligibleStyleColor.js'
 import splitCartons from './phases/splitCartons.js'
 import affinityPrep from './phases/affinityPrep.js'
-import affinityGroup from './phases/affinityPrep.js'
+import affinityGroup from './phases/affinityGroup.js'
 import getInventory from './phases/getInventory.js'
 import makeReplens from './phases/makeReplens.js'
 import assignInventory from './phases/makeReplens.js'
@@ -66,7 +66,12 @@ const execute = (ords, connection, phase, period) => {
                 connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate4 }));
             }
             if (phase === 5) {
+<<<<<<< HEAD
                 const svgUpdate5 = affinityprep();
+=======
+                const svgUpdate5 = affinityPrep();
+                console.log(cache.eligibleStyleColList);
+>>>>>>> c449863e177100899acf0f04fc3576709eb25c25
                 const htmlUpdate5 = [{ id: 'period', value: dtes[i].dte.toDateString() },
                 { id: 'phase', value: 'Affinity martrix ready' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate5 }));
@@ -81,7 +86,7 @@ const execute = (ords, connection, phase, period) => {
                 connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate6 }));
             }
             if (phase === 7) {
-                const svgUpdate7 = GetInventory();
+                const svgUpdate7 = getInventory();
                 const htmlUpdate7 = [{ id: 'period', value: dtes[i].dte.toDateString() },
                 { id: 'phase', value: 'Getting current inventory' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate7 }));
