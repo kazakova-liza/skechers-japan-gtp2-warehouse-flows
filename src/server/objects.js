@@ -4,11 +4,8 @@ const objects = {
             "name": "orders table",
             "type": "text"
         },
-        // {
-        //     "name": "date",
-        //     "type": "text"
-        // }
-    ]
+    ],
+    groups: 20
 }
 
 export default objects;
