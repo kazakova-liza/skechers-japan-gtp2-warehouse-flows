@@ -117,5 +117,7 @@
   <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invEndPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2979.496836" xml:space="preserve" y="562.003113">0</text>
   <text fill="#000000" font-family="serif" font-size="23" id="svg_27" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2473.417902" xml:space="preserve" y="531.746682">Replens</text>
   <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invReplens" stroke="#000000" stroke-width="0" text-anchor="middle" x="2556.410898" xml:space="preserve" y="534.2453">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="someId" stroke="#000000" stroke-width="0" text-anchor="middle" x="3129.246836" xml:space="preserve" y="516.753113">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="someId2" stroke="#000000" stroke-width="0" text-anchor="middle" x="3206.782725" xml:space="preserve" y="515.778297">0</text>
  </g>
 </svg>

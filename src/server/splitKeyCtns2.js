@@ -7,8 +7,10 @@ import splitCartons from './phases/splitCartons.js'
 import affinityPrep from './phases/affinityPrep.js'
 import affinityGroup from './phases/affinityGroup.js'
 import getInventory from './phases/getInventory.js'
+import invFromSlow from './phases/invfromSlow.js'
 import makeReplens from './phases/makeReplens.js'
 import assignInventory from './phases/assignInventory.js'
+import invToSlow from './phases/invToSlow.js'
 
 let thisDte = '';
 cache.cases = [];
@@ -88,18 +90,32 @@ const execute = (ords, connection, phase, period) => {
                 connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate7 }));
             }
             if (phase === 8) {
-                const svgUpdate8 = makeReplens();
+                const svgUpdate8 = invFromSlow();
                 const htmlUpdate8 = [{ id: 'period', value: dtes[i].dte.toDateString() },
-                { id: 'phase', value: 'Calculating what needs replenishment' }];
+                { id: 'phase', value: 'Getting inventory from slow' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate8 }));
                 connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate8 }));
             }
             if (phase === 9) {
-                const svgUpdate9 = assignInventory();
+                const svgUpdate9 = makeReplens();
                 const htmlUpdate9 = [{ id: 'period', value: dtes[i].dte.toDateString() },
-                { id: 'phase', value: 'Assigning inventory for cartons' }];
+                { id: 'phase', value: 'Calculating what needs replenishment' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate9 }));
                 connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate9 }));
+            }
+            if (phase === 10) {
+                const svgUpdate10 = assignInventory();
+                const htmlUpdate10 = [{ id: 'period', value: dtes[i].dte.toDateString() },
+                { id: 'phase', value: 'Assigning inventory for cartons' }];
+                connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate10 }));
+                connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate10 }));
+            }
+            if (phase === 11) {
+                const svgUpdate11 = invToSlow();
+                const htmlUpdate11 = [{ id: 'period', value: dtes[i].dte.toDateString() },
+                { id: 'phase', value: 'Putting slow inventory away' }];
+                connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate11 }));
+                connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate11 }));
             }
         }
     }
