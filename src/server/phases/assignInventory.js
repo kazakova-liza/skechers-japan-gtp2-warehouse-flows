@@ -9,15 +9,24 @@ const assignInventory = () => {
             if (cache.cases[i].sku == line.sku && cache.cases[i].qty > 0) {
                 const pickQty = Math.min(toPut, cache.cases[i].qty)
                 cache.cases[i].qty -= pickQty
-                cache.cases[i].dteUsed = thisDte
+                cache.cases[i].dteUsed = cache.thisDte
                 if (line.putGrp == null) line.putGrp = 0
-                todaypicks.push([thisDte, line.sku, pickQty, cache.cases[i].rackNum, line.carton, line.putGrp])
+                todaypicks.push([cache.thisDte, line.sku, pickQty, cache.cases[i].rackNum, line.carton, line.putGrp])
                 toPut -= pickQty
                 if (toPut == 0) { break }
             }
         }
     }
-    svgUpdate.push({ id: 'z4', value: 999 });
+    let rackCasesEnd = 0
+    let rackQtyEnd = 0
+    for (var rack of cache.cases) {
+        rackCasesEnd++
+        rackQtyEnd += rack.qty
+        if (rack.qty > 0) rackQtyEnd++
+    }
+
+    svgUpdate.push({ id: 'invEndPairs', value: rackQtyEnd });
+    svgUpdate.push({ id: 'invEndCases', value: rackCasesEnd });
 
     return svgUpdate;
 }
