@@ -17,16 +17,11 @@ const assignInventory = () => {
             }
         }
     }
-    let rackCasesEnd = 0
     let rackQtyEnd = 0
-    for (var rack of cache.cases) {
-        rackCasesEnd++
-        rackQtyEnd += rack.qty
-        if (rack.qty > 0) rackQtyEnd++
-    }
+    for (var rack of cache.cases) {rackQtyEnd += rack.qty}
 
     svgUpdate.push({ id: 'invEndPairs', value: rackQtyEnd });
-    svgUpdate.push({ id: 'invEndCases', value: rackCasesEnd });
+    svgUpdate.push({ id: 'invEndCases', value: cache.cases.length });
 
     return svgUpdate;
 }

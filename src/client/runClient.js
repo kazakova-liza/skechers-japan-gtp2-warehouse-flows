@@ -7,6 +7,13 @@ const onStartClick = () => {
     ws.send(JSON.stringify(command));
 };
 
+const onExecutePeriodClick = () => {
+    const command = {
+        topic: 'execute period',
+    };
+    ws.send(JSON.stringify(command));
+};
+
 const onStopClick = () => {
     const command = {
         topic: 'stop',
@@ -30,6 +37,27 @@ const onPeriodClick = () => {
 };
 
 const draw = SVG('#svg1');
+
+document.getElementById('svg1').addEventListener('load', function () {
+    const svgElement = document.getElementById('svg1');
+    var panZoom = svgPanZoom(svgElement, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        minZoom: 0.1,
+        mouseWheelZoomEnabled: false,
+        // fit: 1,
+        center: false
+    });
+    panZoom.zoom(1);
+    panZoom.fit();
+    panZoom.resize();
+
+    $(window).resize(function () {
+        panZoom.resize();
+        panZoom.fit();
+        panZoom.center();
+    })
+})
 
 
 const ws = new WebSocket('ws://localhost:9615/');

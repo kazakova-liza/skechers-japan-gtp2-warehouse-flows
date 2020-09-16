@@ -8,8 +8,9 @@ const makeReplens = () => {
     let usedRacks = cache.cases.map(rack => (rack.rackNum))
     let todayreplens = []
     let ordSkus = groupBy(cache.ords2, ['sku'], ['sqty'], [])
+    let rackSkus = groupBy(cache.cases, ['sku'], ['qty'], [])
     for (var sku of ordSkus) {
-        const rackInv = cache.rackSkus.find((obj) => {
+        const rackInv = rackSkus.find((obj) => {
             return obj.sku == sku.sku;
         });
         let inv = 0
@@ -26,15 +27,11 @@ const makeReplens = () => {
     let replenctns = todayreplens.length
 
     let rackQtyMid = 0
-    let rackCasesMid = 0
-    for (var rack of cache.cases) {
-        rackCasesMid++
-        rackQtyMid += rack.qty
-        if (rack.qty > 0) rackCasesMid++
-    }
+    for (var rack of cache.cases) {rackQtyMid += rack.qty}
     svgUpdate.push({ id: 'invReplens', value: replenctns });
+    svgUpdate.push({ id: 'invReplenQty', value: replenctns*6 });
     svgUpdate.push({ id: 'invMidPairs', value: rackQtyMid });
-    svgUpdate.push({ id: 'invMidCases', value: rackCasesMid });
+    svgUpdate.push({ id: 'invMidCases', value: cache.cases.length });
     return svgUpdate;
 }
 

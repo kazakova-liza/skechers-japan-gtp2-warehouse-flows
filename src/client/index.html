@@ -19,6 +19,7 @@
   <button onclick="onStopClick()"> stop </button>
   <button onclick="onPhaseClick()"> phase++ </button>
   <button onclick="onPeriodClick()"> period++ </button>
+  <button onclick="onExecutePeriodClick()"> execute period </button>
   <br>
   <p style="Text-align:left;float:left"> Period: </p>
   <p id='period'> </p>
@@ -29,35 +30,6 @@
   <object type="image/svg+xml" data="http://localhost:9615/src/client/drawSVG.svg" id="svg1"
     style="width: 100%; height: 100%; "> </object>
 
-
-  <script>
-    // https://github.com/ariutta/svg-pan-zoom#embedding-remote-files
-    document.getElementById('svg1').addEventListener('load', function () {
-      const svgElement = document.getElementById('svg1');
-      var panZoom = svgPanZoom(svgElement, {
-        zoomEnabled: true,
-        controlIconsEnabled: true,
-        minZoom: 0.1,
-        mouseWheelZoomEnabled: false,
-        // fit: 1,
-        center: false
-      });
-      panZoom.zoom(1);
-      panZoom.fit();
-      panZoom.resize();
-
-      $(window).resize(function () {
-        panZoom.resize();
-        panZoom.fit();
-        panZoom.center();
-      })
-    })
-
-
-    // panZoom.resize();
-    // panZoom.fit();
-    // panZoom.center();
-  </script>
 
 </body>
 

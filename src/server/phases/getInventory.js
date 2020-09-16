@@ -6,9 +6,15 @@ const getInventory = () => {
     let rackQtyStart = 0
     cache.cases = cache.cases.filter(rck => { if (rck.qty > 0) { return true } else { return false } })
     for (var rack of cache.cases) { rackQtyStart += rack.qty }
-    cache.rackSkus = groupBy(cache.cases, ['sku'], ['qty'], [])
-    svgUpdate.push({ id: 'invStartPairs', value: rackQtyStart });
-    svgUpdate.push({ id: 'invStartCases', value: cache.cases.length });
+    
+    let slowQtyStart = 0
+    cache.slowPairs = cache.slowPairs.filter(rck => { if (rck.qty > 0) { return true } else { return false } })
+    for (var rack of cache.slowPairs) { slowQtyStart += rack.qty }
+
+    svgUpdate.push({ id: 'invStartP', value: rackQtyStart });
+    svgUpdate.push({ id: 'invStartC', value: cache.cases.length });
+    svgUpdate.push({ id: 'slowStartPairs', value: slowQtyStart });
+    svgUpdate.push({ id: 'slowStartCases', value: cache.slowPairs.length });
     return svgUpdate;
 }
 

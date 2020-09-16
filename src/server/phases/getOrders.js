@@ -1,9 +1,14 @@
 import cache from '../cache.js';
 import groupBy from '../utils/groupBy.js';
+import getData from '../sql/getData.js'
 
-const getOrders = (ords) => {
+const getOrders = async () => {
+    if (cache.ords == undefined) {
+        cache.ords = await getData(cache.table);
+    }
+
     const svgUpdate = [];
-    cache.dayOrds = ords.filter((rec) => rec.dte.getTime() == cache.thisDte.getTime());
+    cache.dayOrds = cache.ords.filter((rec) => rec.dte.getTime() == cache.thisDte.getTime());
     const stats = groupBy(cache.dayOrds, ['dte'], ['sqty'], ['carton', 'sku']);
 
     svgUpdate.push({ id: 'allLines', value: stats[0].cnt });

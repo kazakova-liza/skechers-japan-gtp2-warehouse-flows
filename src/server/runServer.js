@@ -86,6 +86,7 @@ const main = async () => {
                 cache.currentPeriod = 0;
                 const svgUpdate = [{ id: 'phase', value: 'getting orders...' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: svgUpdate }));
+                cache.table = command.payload;
                 cache.ords = await getData(command.payload);
                 await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
             }
@@ -98,6 +99,9 @@ const main = async () => {
                 cache.currentPeriod++;
                 connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
                 await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
+            }
+            if (command.topic === 'execute period') {
+                await execute(cache.ords, connection, 'all', cache.currentPeriod);
             }
         });
 

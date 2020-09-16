@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<svg width="5000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<svg width="5000" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
  <metadata id="metadata244">image/svg+xml</metadata>
  <g class="layer" id="g236">
@@ -87,37 +87,55 @@
   <ellipse cx="1844.499997" cy="537.999999" fill="#bfbfbf" id="svg_42" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
   <text fill="#000000" font-family="serif" font-size="32" id="svg_52" stroke="#000000" stroke-width="0" text-anchor="middle" x="1844.502056" xml:space="preserve" y="522.503126">Get</text>
   <text fill="#000000" font-family="serif" font-size="32" id="svg_53" stroke="#000000" stroke-width="0" text-anchor="middle" x="1842.494244" xml:space="preserve" y="554.495312">inventory</text>
-  <path d="m1972.25799,535.93767l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_54" stroke="#000000" stroke-width="0" transform="rotate(90 1955.5 536)"/>
-  <rect fill="#d4ffaa" height="124.000005" id="svg_55" stroke="#000000" stroke-width="5" width="162.99999" x="1984.000003" y="468.499997"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_57" stroke="#000000" stroke-width="0" text-anchor="middle" x="2026.496028" xml:space="preserve" y="531.496682">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_60" stroke="#000000" stroke-width="0" text-anchor="middle" x="2023.50384" xml:space="preserve" y="566.504494">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_61" stroke="#000000" stroke-width="0" text-anchor="middle" x="2058.501277" xml:space="preserve" y="496.493076">Start</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invStartCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2100.504649" xml:space="preserve" y="529.4953">0</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invStartPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2100.504649" xml:space="preserve" y="561.4953">0</text>
-  <path d="m2194.257975,529.93767l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_74" stroke="#000000" stroke-width="0" transform="rotate(90 2177.5 530)"/>
-  <ellipse cx="2285.499997" cy="530.999995" fill="#bfbfbf" id="svg_75" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_76" stroke="#000000" stroke-width="0" text-anchor="middle" x="2285.494244" xml:space="preserve" y="535.503125">Replenish</text>
-  <path d="m2413.257959,527.937609l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_77" stroke="#000000" stroke-width="0" transform="rotate(90 2396.5 528)"/>
-  <rect fill="#d4ffaa" height="166.000011" id="svg_78" stroke="#000000" stroke-width="5" width="162.99999" x="2427.000011" y="462.999991"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_79" stroke="#000000" stroke-width="0" text-anchor="middle" x="2473.50384" xml:space="preserve" y="570.504494">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_80" stroke="#000000" stroke-width="0" text-anchor="middle" x="2468.496028" xml:space="preserve" y="603.496682">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_81" stroke="#000000" stroke-width="0" text-anchor="middle" x="2502.485652" xml:space="preserve" y="486.500888">Middle</text>
-  <path d="m2635.257944,520.937609l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_84" stroke="#000000" stroke-width="0" transform="rotate(90 2618.5 521)"/>
-  <ellipse cx="2725.499997" cy="517.999992" fill="#bfbfbf" id="svg_85" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_86" stroke="#000000" stroke-width="0" text-anchor="middle" x="2722.486431" xml:space="preserve" y="496.495313">Assign</text>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_87" stroke="#000000" stroke-width="0" text-anchor="middle" x="2724.494244" xml:space="preserve" y="530.503125">inventory</text>
-  <rect fill="#d4ffaa" height="124.000005" id="svg_93" stroke="#000000" stroke-width="5" width="162.99999" x="2863.502269" y="464.500024"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_92" stroke="#000000" stroke-width="0" text-anchor="middle" x="2911.006098" xml:space="preserve" y="526.004525">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_91" stroke="#000000" stroke-width="0" text-anchor="middle" x="2912.998286" xml:space="preserve" y="564.996713">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_90" stroke="#000000" stroke-width="0" text-anchor="middle" x="2938.98791" xml:space="preserve" y="488.000919">End</text>
-  <path d="m2850.760202,520.43764l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_37" stroke="#000000" stroke-width="0" transform="rotate(90 2834 520.5)"/>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMidCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2556.496836" xml:space="preserve" y="575.003113">0</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMidPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2556.496836" xml:space="preserve" y="604.003113">0</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invEndCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2979.496836" xml:space="preserve" y="530.003113">0</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invEndPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2979.496836" xml:space="preserve" y="562.003113">0</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_27" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2473.417902" xml:space="preserve" y="531.746682">Replens</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invReplens" stroke="#000000" stroke-width="0" text-anchor="middle" x="2556.410898" xml:space="preserve" y="534.2453">0</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="someId" stroke="#000000" stroke-width="0" text-anchor="middle" x="3129.246836" xml:space="preserve" y="516.753113">0</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="someId2" stroke="#000000" stroke-width="0" text-anchor="middle" x="3206.782725" xml:space="preserve" y="515.778297">0</text>
+  <path d="m1974.728291,585.435517l-16.758,-49.357896l-16.75799,49.357896l8.379,0l0,49.595387l16.75799,0l0,-49.595387l8.379,0l0,0z" fill="#bfbfbf" id="svg_54" stroke="#000000" stroke-width="0" transform="rotate(141.772 1957.97 585.554)"/>
+  <rect fill="#d4ffaa" height="124.000005" id="svg_55" stroke="#000000" stroke-width="5" width="162.99999" x="1992.000003" y="613.499997"/>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_57" stroke="#000000" stroke-width="0" text-anchor="middle" x="2034.496028" xml:space="preserve" y="676.496682">Cases</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_60" stroke="#000000" stroke-width="0" text-anchor="middle" x="2031.50384" xml:space="preserve" y="711.504494">Pairs</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_61" stroke="#000000" stroke-width="0" text-anchor="middle" x="2066.501277" xml:space="preserve" y="643.493076">Slow Start</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowStartCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2108.504649" xml:space="preserve" y="674.4953">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowStartPairs" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2108.504649" xml:space="preserve" y="706.4953">0</text>
+  <path d="m2202.257975,674.93767l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_74" stroke="#000000" stroke-width="0" transform="rotate(90 2185.5 675)"/>
+  <ellipse cx="2293.499997" cy="675.999995" fill="#bfbfbf" id="svg_75" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
+  <text fill="#000000" font-family="serif" font-size="32" id="svg_76" stroke="#000000" stroke-width="0" text-anchor="middle" x="2293.494244" xml:space="preserve" y="680.503125">Replenish</text>
+  <path d="m2466.757959,672.828408l-16.758,-71.323963l-16.75799,71.323963l8.379,0l0,71.667146l16.75799,0l0,-71.667146l8.379,0l0,0z" fill="#bfbfbf" id="svg_77" stroke="#000000" stroke-width="0" transform="rotate(90 2450 673)"/>
+  <rect fill="#d4ffaa" height="387.000029" id="svg_78" stroke="#000000" stroke-width="5" width="162.99999" x="2529.000011" y="350.000007"/>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_79" stroke="#000000" stroke-width="0" text-anchor="middle" x="2578.50384" xml:space="preserve" y="546.504494">Cases</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_80" stroke="#000000" stroke-width="0" text-anchor="middle" x="2573.496028" xml:space="preserve" y="579.496682">Pairs</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_81" stroke="#000000" stroke-width="0" text-anchor="middle" x="2593.485652" xml:space="preserve" y="511.500888">Middle</text>
+  <path d="m2740.257944,496.937609l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_84" stroke="#000000" stroke-width="0" transform="rotate(90 2723.5 497)"/>
+  <ellipse cx="2830.499997" cy="493.999992" fill="#bfbfbf" id="svg_85" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
+  <text fill="#000000" font-family="serif" font-size="32" id="svg_86" stroke="#000000" stroke-width="0" text-anchor="middle" x="2827.486431" xml:space="preserve" y="472.495313">Assign</text>
+  <text fill="#000000" font-family="serif" font-size="32" id="svg_87" stroke="#000000" stroke-width="0" text-anchor="middle" x="2829.494244" xml:space="preserve" y="506.503125">inventory</text>
+  <rect fill="#d4ffaa" height="124.000005" id="svg_93" stroke="#000000" stroke-width="5" width="162.99999" x="2968.502269" y="440.500024"/>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_92" stroke="#000000" stroke-width="0" text-anchor="middle" x="2581.006098" xml:space="preserve" y="677.004525">Cases</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_91" stroke="#000000" stroke-width="0" text-anchor="middle" x="2582.998286" xml:space="preserve" y="715.996713">Pairs</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_90" stroke="#000000" stroke-width="0" text-anchor="middle" x="2609.98791" xml:space="preserve" y="639.000919">End</text>
+  <path d="m2955.760202,496.43764l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_37" stroke="#000000" stroke-width="0" transform="rotate(90 2939 496.5)"/>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMidCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2661.496836" xml:space="preserve" y="551.003113">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMidPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2661.496836" xml:space="preserve" y="580.003113">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invEndCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2649.496836" xml:space="preserve" y="681.003113">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invEndPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2650.496836" xml:space="preserve" y="713.003113">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invReplens" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2504.410898" xml:space="preserve" y="352.2453">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="someId" stroke="#000000" stroke-width="0" text-anchor="middle" x="2288.246836" xml:space="preserve" y="285.753113">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="someId2" stroke="#000000" stroke-width="0" text-anchor="middle" x="3104.782725" xml:space="preserve" y="179.778297">0</text>
+  <path d="m2237.832638,541.965544l-16.758,-291.917301l-16.75799,291.917301l8.379,0l0,293.321892l16.75799,0l0,-293.321892l8.379,0l0,0z" fill="#bfbfbf" id="svg_98" stroke="#000000" stroke-width="0" transform="rotate(90.8077 2221.07 542.668)"/>
+  <rect fill="#d4ffaa" height="124.000005" id="svg_97" stroke="#000000" stroke-width="5" width="162.99999" x="2003.144511" y="318.35983"/>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_96" stroke="#000000" stroke-width="0" text-anchor="middle" x="2584.640536" xml:space="preserve" y="427.356515">Cases</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_95" stroke="#000000" stroke-width="0" text-anchor="middle" x="2581.648348" xml:space="preserve" y="462.364327">Pairs</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_94" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2614.645785" xml:space="preserve" y="392.352909">Start</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invStartC" stroke="#000000" stroke-width="0" text-anchor="middle" x="2658.649157" xml:space="preserve" y="425.355133">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invStartP" stroke="#000000" stroke-width="0" text-anchor="middle" x="2658.649157" xml:space="preserve" y="457.355133">0</text>
+  <path d="m2213.402483,379.797503l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_83" stroke="#000000" stroke-width="0" transform="rotate(90 2196.64 379.86)"/>
+  <ellipse cx="2304.644505" cy="380.859828" fill="#bfbfbf" id="svg_82" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
+  <text fill="#000000" font-family="serif" font-size="32" id="svg_63" stroke="#000000" stroke-width="0" text-anchor="middle" x="2304.638752" xml:space="preserve" y="385.362958">Replenish</text>
+  <path d="m2474.402467,377.696641l-16.758,-67.83231l-16.75799,67.83231l8.379,0l0,68.158692l16.75799,0l0,-68.158692l8.379,0l0,0z" fill="#bfbfbf" id="svg_62" stroke="#000000" stroke-width="0" transform="rotate(90 2457.64 377.86)"/>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_107" stroke="#000000" stroke-width="0" text-anchor="middle" x="2407.774066" xml:space="preserve" y="657.1078">Cases</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="svg_104" stroke="#000000" stroke-width="0" text-anchor="middle" x="2471.782687" xml:space="preserve" y="725.106418">0</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_110" stroke="#000000" stroke-width="0" text-anchor="middle" x="2402.878841" xml:space="preserve" y="718.254494">Pairs</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_114" stroke="#000000" stroke-width="0" text-anchor="middle" x="2426.813129" xml:space="preserve" y="356.881238">Cases</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invReplenQty" stroke="#000000" stroke-width="0" text-anchor="middle" x="2496.82175" xml:space="preserve" y="417.879856">0</text>
+  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="svg_112" stroke="#000000" stroke-width="0" text-anchor="middle" x="2489.82175" xml:space="preserve" y="649.879856">0</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_111" stroke="#000000" stroke-width="0" text-anchor="middle" x="2421.917903" xml:space="preserve" y="418.027932">Pairs</text>
+  <text fill="#000000" font-family="serif" font-size="23" id="svg_115" stroke="#000000" stroke-width="0" text-anchor="middle" x="2093.52978" xml:space="preserve" y="359.170185">Reserve</text>
  </g>
 </svg>
