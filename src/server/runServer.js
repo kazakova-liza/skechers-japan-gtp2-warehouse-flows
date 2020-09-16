@@ -103,7 +103,7 @@ const main = async () => {
 
         connection.on('close', (reasonCode, description) => {
             console.log('Client has disconnected, stopping the experiment');
-            experimentExecutor.stop();
+            // experimentExecutor.stop();
         });
     });
 };

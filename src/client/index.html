@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.11/svg.min.js"></script>
 <script src="https://cdn.rawgit.com/ariutta/svg-pan-zoom/master/dist/svg-pan-zoom.min.js"></script>
-<script src=http://ariutta.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js></script>
+<script src=https://cdn.rawgit.com/ariutta/svg-pan-zoom/master/dist/svg-pan-zoom.min.js></script>
 <script src="https://cdn.jsdelivr.net/npm/jsframe.js/lib/jsframe.min.js"></script>
 
 <!-- <script type="module" src="http://localhost:9615/src/client/dates.js"></script> -->
@@ -26,7 +26,38 @@
   <p style="Text-align:left;float:left"> Phase: </p>
   <p id='phase'> </p>
 
-  <object type="image/svg+xml" data="http://localhost:9615/src/client/drawSVG.svg" id="svg1"> </object>
+  <object type="image/svg+xml" data="http://localhost:9615/src/client/drawSVG.svg" id="svg1"
+    style="width: 100%; height: 100%; "> </object>
+
+
+  <script>
+    // https://github.com/ariutta/svg-pan-zoom#embedding-remote-files
+    document.getElementById('svg1').addEventListener('load', function () {
+      const svgElement = document.getElementById('svg1');
+      var panZoom = svgPanZoom(svgElement, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        minZoom: 0.1,
+        mouseWheelZoomEnabled: false,
+        // fit: 1,
+        center: false
+      });
+      panZoom.zoom(1);
+      panZoom.fit();
+      panZoom.resize();
+
+      $(window).resize(function () {
+        panZoom.resize();
+        panZoom.fit();
+        panZoom.center();
+      })
+    })
+
+
+    // panZoom.resize();
+    // panZoom.fit();
+    // panZoom.center();
+  </script>
 
 </body>
 
