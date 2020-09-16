@@ -32,7 +32,9 @@ const makeReplens = () => {
         rackQtyMid += rack.qty
         if (rack.qty > 0) rackCasesMid++
     }
-    svgUpdate.push({ id: 'casesToReplenish', value: replenctns });
+    svgUpdate.push({ id: 'invReplens', value: replenctns });
+    svgUpdate.push({ id: 'invMidPairs', value: rackQtyMid });
+    svgUpdate.push({ id: 'invMidCases', value: rackCasesMid });
     return svgUpdate;
 }
 

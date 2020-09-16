@@ -8,7 +8,7 @@ import affinityPrep from './phases/affinityPrep.js'
 import affinityGroup from './phases/affinityGroup.js'
 import getInventory from './phases/getInventory.js'
 import makeReplens from './phases/makeReplens.js'
-import assignInventory from './phases/makeReplens.js'
+import assignInventory from './phases/assignInventory.js'
 
 let thisDte = '';
 cache.cases = [];
