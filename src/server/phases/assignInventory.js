@@ -17,11 +17,12 @@ const assignInventory = () => {
             }
         }
     }
+    cache.cases = cache.cases.filter(rck => { if (rck.qty > 0) { return true } else { return false } })
     let rackQtyEnd = 0
     for (var rack of cache.cases) {rackQtyEnd += rack.qty}
 
-    svgUpdate.push({ id: 'invEndPairs', value: rackQtyEnd });
-    svgUpdate.push({ id: 'invEndCases', value: cache.cases.length });
+    svgUpdate.push({ id: 'invMid3Pairs', value: rackQtyEnd });
+    svgUpdate.push({ id: 'invMid3Cases', value: cache.cases.length });
 
     return svgUpdate;
 }

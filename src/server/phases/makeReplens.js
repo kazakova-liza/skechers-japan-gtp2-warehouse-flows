@@ -30,8 +30,8 @@ const makeReplens = () => {
     for (var rack of cache.cases) {rackQtyMid += rack.qty}
     svgUpdate.push({ id: 'invReplens', value: replenctns });
     svgUpdate.push({ id: 'invReplenQty', value: replenctns*6 });
-    svgUpdate.push({ id: 'invMidPairs', value: rackQtyMid });
-    svgUpdate.push({ id: 'invMidCases', value: cache.cases.length });
+    svgUpdate.push({ id: 'invMid2Pairs', value: rackQtyMid });
+    svgUpdate.push({ id: 'invMid2Cases', value: cache.cases.length });
     return svgUpdate;
 }
 

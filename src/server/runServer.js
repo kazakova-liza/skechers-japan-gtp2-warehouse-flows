@@ -5,7 +5,7 @@ import path from 'path';
 import websocket from 'websocket';
 import objects from './objects.js';
 import getData from './sql/getData.js';
-import execute from './splitKeyCtns2.js';
+import execute from './engine.js';
 import cache from './cache.js';
 
 const port = 9615;

@@ -7,6 +7,36 @@ const onStartClick = () => {
     ws.send(JSON.stringify(command));
 };
 
+const json2Table = (json) => {
+    console.log(json);
+    console.log(json[0]);
+    //https://dev.to/boxofcereal/how-to-generate-a-table-from-json-data-with-es6-methods-2eel
+    let cols = Object.keys(json[0]);
+    let headerRow = cols
+        .map(col => `<th>${col}</th>`)
+        .join("");
+
+    let rows = json
+        .map(row => {
+            let tds = cols.map(col => `<td>${row[col]}</td>`).join("");
+            return `<tr>${tds}</tr>`;
+        })
+        .join("");
+
+    //build the table
+    const table = `
+    <table>
+      <thead>
+        <tr>${headerRow}</tr>
+      <thead>
+      <tbody>
+        ${rows}
+      <tbody>
+    <table>`;
+
+    return table;
+}
+
 const onExecutePeriodClick = () => {
     const command = {
         topic: 'execute period',
@@ -59,6 +89,9 @@ document.getElementById('svg1').addEventListener('load', function () {
     })
 })
 
+const table = document.getElementById('table');
+let dataForTable = [];
+
 
 const ws = new WebSocket('ws://localhost:9615/');
 ws.onopen = function () {
@@ -96,6 +129,13 @@ ws.onmessage = function (e) {
             const a = document.getElementById('svg1');
             const svgDoc = a.contentDocument;
             svgDoc.getElementById(element.id).textContent = element.value;
+            const currentDate = document.getElementById('period').textContent;
+            dataForTable.push({
+                date: currentDate,
+                name: element.id,
+                value: element.value
+            })
+            table.innerHTML = json2Table(dataForTable);
         }
     }
 
