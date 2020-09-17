@@ -70,6 +70,13 @@ const main = async () => {
             let numberOfPeriodsToExecute;
             let data;
             let ords;
+            let phases = [];
+
+            for (const phase of objects.phases) {
+                phases.push(phase.number);
+            }
+
+            const maxPhase = Math.max(...phases);
 
             try {
                 command = JSON.parse(message.utf8Data);
@@ -83,10 +90,15 @@ const main = async () => {
                 connection.sendUTF(JSON.stringify({ topic: 'inputs', payload: objects.inputs }));
             }
             if (command.topic === 'jump') {
+                if (cache.currentPhase < maxPhase) {
+                    numberOfPeriodsToExecute = 1;
+                    await execute(cache.ords, connection, 'all', cache.currentPeriod, numberOfPeriodsToExecute);
+                }
                 cache.currentPeriod++;
                 numberOfPeriodsToExecute = command.payload;
-
                 await execute(cache.ords, connection, 'all', cache.currentPeriod, numberOfPeriodsToExecute);
+                cache.currentPeriod = cache.currentPeriod + numberOfPeriodsToExecute - 1;
+                console.log(cache.currentPeriod);
             }
             if (command.topic === 'start') {
                 numberOfPeriodsToExecute = 1;
