@@ -18,10 +18,10 @@ const json2Table = (json) => {
 
     let rows = json
         .map(row => {
-            let tds = cols.map(col => `<td>${row[col]}</td>`).join("");
+            let tds = cols.map(col => `<td>${row[col]}</td>`).join("  ");
             return `<tr>${tds}</tr>`;
         })
-        .join("");
+        .join("  ");
 
     //build the table
     const table = `
@@ -91,6 +91,7 @@ document.getElementById('svg1').addEventListener('load', function () {
 
 const table = document.getElementById('table');
 let dataForTable = [];
+let dates = [];
 
 
 const ws = new WebSocket('ws://localhost:9615/');
@@ -130,12 +131,10 @@ ws.onmessage = function (e) {
             const svgDoc = a.contentDocument;
             svgDoc.getElementById(element.id).textContent = element.value;
             const currentDate = document.getElementById('period').textContent;
-            dataForTable.push({
-                date: currentDate,
-                name: element.id,
-                value: element.value
-            })
-            table.innerHTML = json2Table(dataForTable);
+            if (!dates.includes(currentDate)) {
+                dates.push(currentDate);
+            }
+            // table.innerHTML = json2Table(dataForTable);
         }
     }
 
@@ -144,10 +143,33 @@ ws.onmessage = function (e) {
         const a = document.getElementById('svg1');
         const svgDoc = a.contentDocument;
         const elements = svgDoc.getElementsByClassName('variable');
+        const currentDate = document.getElementById('period').textContent;
         console.log(elements);
         for (const element of elements) {
-            element.textContent = 0;
+            if (dataForTable.length === 0) {
+                dataForTable.push({
+                    name: element.id,
+                    [currentDate]: element.textContent
+                })
+            }
+            for (let i = 0; i < dataForTable.length; i++) {
+                if (dataForTable[i].name === element.id) {
+                    if (!dataForTable[i].hasOwnProperty(currentDate)) {
+                        dataForTable[i][currentDate] = element.textContent;
+                    }
+                    break;
+                }
+                if (i === dataForTable.length - 1 && dataForTable[i].name !== element.id) {
+                    dataForTable.push({
+                        name: element.id,
+                        [currentDate]: element.textContent
+                    })
+                }
+            }
+            element.textContent = '-';
         }
+        console.log(`data for table: ${dataForTable}`);
+        table.innerHTML = json2Table(dataForTable);
     }
 
     if (message.topic == 'htmlUpdate') {

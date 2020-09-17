@@ -4,7 +4,7 @@ import objects from './objects.js'
 
 
 cache.cases = [];
-
+cache.slowPairs = [];
 
 const blankOne = () => {
     const svgUpdate = [];
