@@ -7,6 +7,15 @@ const onStartClick = () => {
     ws.send(JSON.stringify(command));
 };
 
+const onJumpClick = () => {
+    const numberOfDays = document.getElementById('numberOfDays').value;
+    const command = {
+        topic: 'jump',
+        payload: numberOfDays,
+    };
+    ws.send(JSON.stringify(command));
+};
+
 const json2Table = (json) => {
     console.log(json);
     console.log(json[0]);
@@ -131,10 +140,27 @@ ws.onmessage = function (e) {
             const svgDoc = a.contentDocument;
             svgDoc.getElementById(element.id).textContent = element.value;
             const currentDate = document.getElementById('period').textContent;
-            if (!dates.includes(currentDate)) {
-                dates.push(currentDate);
+            if (dataForTable.length === 0) {
+                dataForTable.push({
+                    name: element.id,
+                    [currentDate]: element.value
+                })
             }
-            // table.innerHTML = json2Table(dataForTable);
+            for (let i = 0; i < dataForTable.length; i++) {
+                if (dataForTable[i].name === element.id) {
+                    if (!dataForTable[i].hasOwnProperty(currentDate)) {
+                        dataForTable[i][currentDate] = element.value;
+                    }
+                    break;
+                }
+                if (i === dataForTable.length - 1 && dataForTable[i].name !== element.id) {
+                    dataForTable.push({
+                        name: element.id,
+                        [currentDate]: element.value
+                    })
+                }
+            }
+            table.innerHTML = json2Table(dataForTable);
         }
     }
 
@@ -146,26 +172,26 @@ ws.onmessage = function (e) {
         const currentDate = document.getElementById('period').textContent;
         console.log(elements);
         for (const element of elements) {
-            if (dataForTable.length === 0) {
-                dataForTable.push({
-                    name: element.id,
-                    [currentDate]: element.textContent
-                })
-            }
-            for (let i = 0; i < dataForTable.length; i++) {
-                if (dataForTable[i].name === element.id) {
-                    if (!dataForTable[i].hasOwnProperty(currentDate)) {
-                        dataForTable[i][currentDate] = element.textContent;
-                    }
-                    break;
-                }
-                if (i === dataForTable.length - 1 && dataForTable[i].name !== element.id) {
-                    dataForTable.push({
-                        name: element.id,
-                        [currentDate]: element.textContent
-                    })
-                }
-            }
+            // if (dataForTable.length === 0) {
+            //     dataForTable.push({
+            //         name: element.id,
+            //         [currentDate]: element.textContent
+            //     })
+            // }
+            // for (let i = 0; i < dataForTable.length; i++) {
+            //     if (dataForTable[i].name === element.id) {
+            //         if (!dataForTable[i].hasOwnProperty(currentDate)) {
+            //             dataForTable[i][currentDate] = element.textContent;
+            //         }
+            //         break;
+            //     }
+            //     if (i === dataForTable.length - 1 && dataForTable[i].name !== element.id) {
+            //         dataForTable.push({
+            //             name: element.id,
+            //             [currentDate]: element.textContent
+            //         })
+            //     }
+            // }
             element.textContent = '-';
         }
         console.log(`data for table: ${dataForTable}`);

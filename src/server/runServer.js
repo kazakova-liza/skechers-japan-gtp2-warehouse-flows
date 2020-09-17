@@ -67,6 +67,7 @@ const main = async () => {
             console.log('Received Message:', message.utf8Data);
 
             let command;
+            let numberOfPeriodsToExecute;
             let data;
             let ords;
 
@@ -77,31 +78,41 @@ const main = async () => {
                 console.log('Command is not a JSON, skipping');
                 return;
             }
-            if (command.topic === 'stop') { }
+            // if (command.topic === 'stop') { }
             if (command.topic === 'inputs') {
                 connection.sendUTF(JSON.stringify({ topic: 'inputs', payload: objects.inputs }));
             }
+            if (command.topic === 'jump') {
+                cache.currentPeriod++;
+                numberOfPeriodsToExecute = command.payload;
+
+                await execute(cache.ords, connection, 'all', cache.currentPeriod, numberOfPeriodsToExecute);
+            }
             if (command.topic === 'start') {
+                numberOfPeriodsToExecute = 1;
                 cache.currentPhase = 1;
                 cache.currentPeriod = 0;
                 const svgUpdate = [{ id: 'phase', value: 'getting orders...' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: svgUpdate }));
                 cache.table = command.payload;
                 cache.ords = await getData(command.payload);
-                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
+                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod, numberOfPeriodsToExecute);
             }
             if (command.topic === 'phase++') {
+                numberOfPeriodsToExecute = 1;
                 cache.currentPhase++;
-                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
+                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod, numberOfPeriodsToExecute);
             }
             if (command.topic === 'period++') {
                 cache.currentPhase = 1;
+                numberOfPeriodsToExecute = 1;
                 cache.currentPeriod++;
                 connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
-                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod);
+                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod, numberOfPeriodsToExecute);
             }
             if (command.topic === 'execute period') {
-                await execute(cache.ords, connection, 'all', cache.currentPeriod);
+                numberOfPeriodsToExecute = 1;
+                await execute(cache.ords, connection, 'all', cache.currentPeriod, numberOfPeriodsToExecute);
             }
         });
 
