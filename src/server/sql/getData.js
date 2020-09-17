@@ -5,7 +5,7 @@ const getData = async (tableName) => {
     const sql1 = `SELECT carton, DATE(date2) AS dte, sqty, sku, 
         LEFT(sku,5) as style, LEFT(sku,12) as styleCol 
         FROM japan.${tableName} 
-        WHERE ttype = 'Pick' and  date(date2) between '2019-04-05' and '2019-04-08'
+        WHERE ttype = 'Pick' and  date(date2) between '2019-04-05' and '2019-04-30'
         `;
     // const sql1 = `SELECT *
     // FROM japan.${tableName}
