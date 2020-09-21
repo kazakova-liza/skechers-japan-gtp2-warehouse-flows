@@ -17,7 +17,8 @@ const objects = {
             "type": "text"
         },
     ],
-    groups: 20,
+    groups: 120,
+    daysbeforeArchiveToSlow: 30,
     phases: [
         {
             number: 1,

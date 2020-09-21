@@ -1,10 +1,11 @@
 import cache from '../cache.js';
 import groupBy from '../utils/groupBy.js';
+import objects from '../objects.js'
 
 const invToSlow = () => {
     const svgUpdate = [];
     let slowDate = new Date(cache.thisDte)
-    slowDate.setDate(cache.thisDte.getDate() - 3)
+    slowDate.setDate(cache.thisDte.getDate() - objects.daysbeforeArchiveToSlow)
     const slow = cache.cases.filter(rck => {if (rck.dteUsed < slowDate && rck.qty > 0) {return true} else {return false } })
     cache.cases = cache.cases.filter(rck => {if (rck.dteUsed < slowDate && rck.qty > 0) {return false} else {return true } })
     cache.slowPairs = cache.slowPairs.concat(slow)

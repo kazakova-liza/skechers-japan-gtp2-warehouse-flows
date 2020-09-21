@@ -20,7 +20,7 @@ const execute = async (ords, connection, phase, period, numberOfPeriodsToExecute
     console.log('dtes = ', dtes.length);
     dtes.sort((a, b) => a.dte.getTime() - b.dte.getTime());
 
-    for (let i = period; i < period + numberOfPeriodsToExecute; i++) {
+    for (let i = period; i < period + parseInt(numberOfPeriodsToExecute); i++) {
         cache.thisDte = dtes[i].dte;
         let svgUpdate;
         connection.sendUTF(JSON.stringify({
