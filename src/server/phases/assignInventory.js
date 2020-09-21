@@ -14,7 +14,7 @@ const assignInventory = () => {
                 cache.cases[i].qty -= pickQty
                 cache.cases[i].dteUsed = cache.thisDte
                 if (line.putGrp == null) line.putGrp = 0
-                todaypicks.push([cache.thisDte, line.sku, pickQty, cache.cases[i].rackNum, line.carton, line.putGrp])
+                todaypicks.push([cache.thisDte, line.sku, pickQty, cache.cases[i].rackNum, line.carton, line.putGrp]) //can go to MySQL (check a sequence of columns table), add a button, dialog box for a table name
                 ords3.push({ "dte": cache.thisDte, "sku": line.sku, "qty": pickQty, "rackNum": cache.cases[i].rackNum, "carton": line.carton, "grp": line.putGrp })
                 toPut -= pickQty
                 if (toPut == 0) { break }
@@ -45,7 +45,7 @@ const assignInventory = () => {
     svgUpdate.push({ id: 'finGroupAvgPairs', value: (stats.qty / stats.grps).toFixed(1) });
     svgUpdate.push({ id: 'finGroupAvgRacks', value: (stats.racks / stats.grps).toFixed(1) });
     svgUpdate.push({ id: 'finAvgPairsPerCase', value: (stats.qty / stats.racks).toFixed(1) });
-    svgUpdate.push({ id: 'robotVisits', value: stats.racks});
+    svgUpdate.push({ id: 'robotVisits', value: stats.racks });
 
     return svgUpdate;
 }

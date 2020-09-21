@@ -1,3 +1,6 @@
+let dataForTable = [];
+let dates = [];
+
 const onStartClick = () => {
     const table = document.getElementById('Orders table').value;
     const groups = document.getElementById('Groups').value;
@@ -11,13 +14,28 @@ const onStartClick = () => {
         }
     };
     ws.send(JSON.stringify(command));
+    document.getElementById('start').disabled = true;
 };
 
 const onJumpClick = () => {
+    document.getElementById('period++').disabled = true;
+    document.getElementById('phase++').disabled = true;
+    document.getElementById('execute period').disabled = true;
+    document.getElementById('jump').disabled = true;
+    document.getElementById('dump').disabled = true;
+    document.getElementById('start').disabled = true;
     const numberOfPeriods = document.getElementById('numberOfPeriods').value;
     const command = {
         topic: 'jump',
         payload: numberOfPeriods,
+    };
+    ws.send(JSON.stringify(command));
+};
+
+const onDumpClick = () => {
+    const command = {
+        topic: 'dump',
+        payload: dataForTable,
     };
     ws.send(JSON.stringify(command));
 };
@@ -50,6 +68,12 @@ const json2Table = (json) => {
 }
 
 const onExecutePeriodClick = () => {
+    document.getElementById('period++').disabled = true;
+    document.getElementById('phase++').disabled = true;
+    document.getElementById('execute period').disabled = true;
+    document.getElementById('jump').disabled = true;
+    document.getElementById('dump').disabled = true;
+    document.getElementById('start').disabled = true;
     const command = {
         topic: 'execute period',
     };
@@ -64,6 +88,12 @@ const onStopClick = () => {
 };
 
 const onPhaseClick = () => {
+    document.getElementById('period++').disabled = true;
+    document.getElementById('phase++').disabled = true;
+    document.getElementById('execute period').disabled = true;
+    document.getElementById('jump').disabled = true;
+    document.getElementById('dump').disabled = true;
+    document.getElementById('start').disabled = true;
     const command = {
         topic: 'phase++',
     };
@@ -72,6 +102,12 @@ const onPhaseClick = () => {
 };
 
 const onPeriodClick = () => {
+    document.getElementById('period++').disabled = true;
+    document.getElementById('phase++').disabled = true;
+    document.getElementById('execute period').disabled = true;
+    document.getElementById('jump').disabled = true;
+    document.getElementById('dump').disabled = true;
+    document.getElementById('start').disabled = true;
     const command = {
         topic: 'period++',
     };
@@ -96,8 +132,6 @@ document.getElementById('svg1').addEventListener('load', function () {
 })
 
 const table = document.getElementById('table');
-let dataForTable = [];
-let dates = [];
 
 const ws = new WebSocket('ws://localhost:9615/');
 ws.onopen = function () {
@@ -112,15 +146,7 @@ ws.onmessage = function (e) {
     message = JSON.parse(e.data);
     if (message.topic === 'inputs') {
         let html = '';
-        let labelName;
         for (const input of message.payload) {
-            // if (input.name === 'orders table') {
-            //     labelName = 'Table name:';
-            // }
-            // if (input.name === 'date') {
-            //     labelName = 'Date:';
-            // }
-
             html += `<label for="${input.name}"> ${input.name}: </label>
                 <textarea id="${input.name}" name="${input.name}" rows="1" cols="20"> </textarea>
                 <br>`;
@@ -131,6 +157,12 @@ ws.onmessage = function (e) {
 
     if (message.topic == 'svgUpdate') {
         console.log(message);
+        document.getElementById('period++').disabled = false;
+        document.getElementById('phase++').disabled = false;
+        document.getElementById('execute period').disabled = false;
+        document.getElementById('jump').disabled = false;
+        document.getElementById('dump').disabled = false;
+        document.getElementById('start').disabled = false;
         for (element of message.payload) {
             const a = document.getElementById('svg1');
             const svgDoc = a.contentDocument;
@@ -165,29 +197,7 @@ ws.onmessage = function (e) {
         const a = document.getElementById('svg1');
         const svgDoc = a.contentDocument;
         const elements = svgDoc.getElementsByClassName('variable');
-        const currentDate = document.getElementById('period').textContent;
-        console.log(elements);
         for (const element of elements) {
-            // if (dataForTable.length === 0) {
-            //     dataForTable.push({
-            //         name: element.id,
-            //         [currentDate]: element.textContent
-            //     })
-            // }
-            // for (let i = 0; i < dataForTable.length; i++) {
-            //     if (dataForTable[i].name === element.id) {
-            //         if (!dataForTable[i].hasOwnProperty(currentDate)) {
-            //             dataForTable[i][currentDate] = element.textContent;
-            //         }
-            //         break;
-            //     }
-            //     if (i === dataForTable.length - 1 && dataForTable[i].name !== element.id) {
-            //         dataForTable.push({
-            //             name: element.id,
-            //             [currentDate]: element.textContent
-            //         })
-            //     }
-            // }
             element.textContent = '-';
         }
         console.log(`data for table: ${dataForTable}`);

@@ -5,7 +5,7 @@ import path from 'path';
 import websocket from 'websocket';
 import objects from './objects.js';
 import getData from './sql/getData.js';
-import execute from './engine.js';
+import execute from './execute.js';
 import cache from './cache.js';
 
 const port = 9615;
@@ -58,18 +58,15 @@ const runWebSocketServer = () => {
 
 const main = async () => {
     const wsServer = runWebSocketServer();
-    let connection;
 
     wsServer.on('request', async (request) => {
-        connection = request.accept(null, request.origin);
+        cache.connection = request.accept(null, request.origin);
 
-        connection.on('message', async (message) => {
+        cache.connection.on('message', async (message) => {
             console.log('Received Message:', message.utf8Data);
 
             let command;
             let numberOfPeriodsToExecute;
-            let data;
-            let ords;
             let phases = [];
 
             for (const phase of objects.phases) {
@@ -87,50 +84,49 @@ const main = async () => {
             }
             // if (command.topic === 'stop') { }
             if (command.topic === 'inputs') {
-                connection.sendUTF(JSON.stringify({ topic: 'inputs', payload: objects.inputs }));
+                cache.connection.sendUTF(JSON.stringify({ topic: 'inputs', payload: objects.inputs }));
             }
             if (command.topic === 'jump') {
                 if (cache.currentPhase < maxPhase) {
                     numberOfPeriodsToExecute = 1;
-                    await execute(cache.ords, connection, 'all', cache.currentPeriod, numberOfPeriodsToExecute);
+                    await execute(numberOfPeriodsToExecute, 'all');
                 }
                 cache.currentPeriod++;
                 numberOfPeriodsToExecute = command.payload;
-                await execute(cache.ords, connection, 'all', cache.currentPeriod, numberOfPeriodsToExecute);
+                await execute(numberOfPeriodsToExecute, 'all');
                 cache.currentPeriod = cache.currentPeriod + numberOfPeriodsToExecute - 1;
-                console.log(cache.currentPeriod);
             }
             if (command.topic === 'start') {
                 numberOfPeriodsToExecute = 1;
                 cache.currentPhase = 1;
                 cache.currentPeriod = 0;
                 const svgUpdate = [{ id: 'phase', value: 'getting orders...' }];
-                connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: svgUpdate }));
+                cache.connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: svgUpdate }));
                 cache.table = command.payload.table;
                 cache.groups = command.payload.groups;
                 cache.daysbeforeArchiveToSlow = command.payload.moveToSlow;
                 cache.ords = await getData(cache.table);
-                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod, numberOfPeriodsToExecute);
+                await execute(numberOfPeriodsToExecute);
             }
             if (command.topic === 'phase++') {
                 numberOfPeriodsToExecute = 1;
                 cache.currentPhase++;
-                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod, numberOfPeriodsToExecute);
+                await execute(numberOfPeriodsToExecute);
             }
             if (command.topic === 'period++') {
                 cache.currentPhase = 1;
                 numberOfPeriodsToExecute = 1;
                 cache.currentPeriod++;
-                connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
-                await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod, numberOfPeriodsToExecute);
+                cache.connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
+                await execute(numberOfPeriodsToExecute);
             }
             if (command.topic === 'execute period') {
                 numberOfPeriodsToExecute = 1;
-                await execute(cache.ords, connection, 'all', cache.currentPeriod, numberOfPeriodsToExecute);
+                await execute(numberOfPeriodsToExecute, 'all');
             }
         });
 
-        connection.on('close', (reasonCode, description) => {
+        cache.connection.on('close', (reasonCode, description) => {
             console.log('Client has disconnected, stopping the experiment');
             // experimentExecutor.stop();
         });

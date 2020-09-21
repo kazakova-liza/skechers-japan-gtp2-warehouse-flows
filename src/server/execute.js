@@ -14,16 +14,16 @@ const blankOne = () => {
     return svgUpdate;
 }
 
-const execute = async (ords, connection, phase, period, numberOfPeriodsToExecute) => {
+const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => {
     const t1 = Date.now();
-    const dtes = groupBy(ords, ['dte'], [], []);
+    const dtes = groupBy(cache.ords, ['dte'], [], []);
     console.log('dtes = ', dtes.length);
     dtes.sort((a, b) => a.dte.getTime() - b.dte.getTime());
 
-    for (let i = period; i < period + parseInt(numberOfPeriodsToExecute); i++) {
+    for (let i = cache.currentPeriod; i < cache.currentPeriod + parseInt(numberOfPeriodsToExecute); i++) {
         cache.thisDte = dtes[i].dte;
         let svgUpdate;
-        connection.sendUTF(JSON.stringify({
+        cache.connection.sendUTF(JSON.stringify({
             topic: 'htmlUpdate',
             payload:
                 [{
@@ -40,13 +40,13 @@ const execute = async (ords, connection, phase, period, numberOfPeriodsToExecute
                     svgUpdate = el.function();
                 }
                 const htmlUpdate = [{ id: 'phase', value: el.textOnCompletion }];
-                connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate }));
-                connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate }));
+                cache.connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate }));
+                cache.connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate }));
             }
         }
         else {
             const currentPhase = objects.phases.find((el) => el.number === phase);
-            connection.sendUTF(JSON.stringify({
+            cache.connection.sendUTF(JSON.stringify({
                 topic: 'htmlUpdate',
                 payload:
                     [{
@@ -60,7 +60,7 @@ const execute = async (ords, connection, phase, period, numberOfPeriodsToExecute
             else {
                 svgUpdate = currentPhase.function();
             }
-            connection.sendUTF(JSON.stringify({
+            cache.connection.sendUTF(JSON.stringify({
                 topic: 'htmlUpdate',
                 payload:
                     [{
@@ -68,7 +68,7 @@ const execute = async (ords, connection, phase, period, numberOfPeriodsToExecute
                         value: currentPhase.textOnCompletion
                     }]
             }));
-            connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate }));
+            cache.connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate }));
         }
 
     }
