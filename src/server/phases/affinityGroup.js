@@ -28,13 +28,13 @@ const affinityGroup = () => {
             }
             grpList = grpList.concat(candidate.map(a => a.ord2))
             grpList = Array.from(new Set(grpList))
-            if (grpList.length > objects.groups) break
+            if (grpList.length > cache.groups) break
             //console.log(grpList.length, affAll.length)
         }
-        if (grpList.length < objects.groups) {
+        if (grpList.length < cache.groups) {
             console.log('short')
         }
-        grpList = grpList.slice(0, objects.groups)
+        grpList = grpList.slice(0, cache.groups)
         grpList.forEach(ctn => {
             allGrps[ctn] = grpNum
         })
@@ -55,13 +55,13 @@ const affinityGroup = () => {
     const affRes = groupBy(cache.ords2, ['putGrp'], ['sqty'], ['carton', 'sku'])
     //need to display average line, skus, cartons per group from affRes
     var stats = affRes.reduce((stats, grp) => {
-        stats.grps ++
-        stats.skus+= grp.sku_dcnt
+        stats.grps++
+        stats.skus += grp.sku_dcnt
         stats.ctns += grp.carton_dcnt
         stats.qty += grp.sqty_sum
         stats.lines += grp.cnt
         return stats
-      }, {"grps":0, "skus":0, "ctns":0, "qty":0, "lines":0});
+    }, { "grps": 0, "skus": 0, "ctns": 0, "qty": 0, "lines": 0 });
 
     svgUpdate.push({ id: 'groups', value: stats.grps });
     svgUpdate.push({ id: 'groupAvgLines', value: (stats.lines / stats.grps).toFixed(1) });

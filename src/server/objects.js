@@ -13,7 +13,15 @@ import invToSlow from './phases/invToSlow.js'
 const objects = {
     "inputs": [
         {
-            "name": "orders table",
+            "name": "Orders table",
+            "type": "text"
+        },
+        {
+            "name": "Groups",
+            "type": "text"
+        },
+        {
+            "name": "Move to slow",
             "type": "text"
         },
     ],

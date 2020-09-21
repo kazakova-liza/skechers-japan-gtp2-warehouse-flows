@@ -106,8 +106,10 @@ const main = async () => {
                 cache.currentPeriod = 0;
                 const svgUpdate = [{ id: 'phase', value: 'getting orders...' }];
                 connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: svgUpdate }));
-                cache.table = command.payload;
-                cache.ords = await getData(command.payload);
+                cache.table = command.payload.table;
+                cache.groups = command.payload.groups;
+                cache.daysbeforeArchiveToSlow = command.payload.moveToSlow;
+                cache.ords = await getData(cache.table);
                 await execute(cache.ords, connection, cache.currentPhase, cache.currentPeriod, numberOfPeriodsToExecute);
             }
             if (command.topic === 'phase++') {

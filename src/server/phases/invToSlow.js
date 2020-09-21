@@ -5,19 +5,19 @@ import objects from '../objects.js'
 const invToSlow = () => {
     const svgUpdate = [];
     let slowDate = new Date(cache.thisDte)
-    slowDate.setDate(cache.thisDte.getDate() - objects.daysbeforeArchiveToSlow)
-    const slow = cache.cases.filter(rck => {if (rck.dteUsed < slowDate && rck.qty > 0) {return true} else {return false } })
-    cache.cases = cache.cases.filter(rck => {if (rck.dteUsed < slowDate && rck.qty > 0) {return false} else {return true } })
+    slowDate.setDate(cache.thisDte.getDate() - cache.daysbeforeArchiveToSlow)
+    const slow = cache.cases.filter(rck => { if (rck.dteUsed < slowDate && rck.qty > 0) { return true } else { return false } })
+    cache.cases = cache.cases.filter(rck => { if (rck.dteUsed < slowDate && rck.qty > 0) { return false } else { return true } })
     cache.slowPairs = cache.slowPairs.concat(slow)
- 
+
     let invQty = 0
-    for (var rack of cache.cases) {invQty += rack.qty}
+    for (var rack of cache.cases) { invQty += rack.qty }
 
     let slowQty = 0
-    for (var slw of cache.slowPairs) {slowQty += slw.qty}
+    for (var slw of cache.slowPairs) { slowQty += slw.qty }
 
     let slowMoveQty = 0
-    for (var slw of slow) {slowMoveQty += slw.qty}
+    for (var slw of slow) { slowMoveQty += slw.qty }
 
     svgUpdate.push({ id: 'invEndPairs', value: invQty });
     svgUpdate.push({ id: 'invEndCases', value: cache.cases.length });

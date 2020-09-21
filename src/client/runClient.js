@@ -1,24 +1,28 @@
 const onStartClick = () => {
-    const table = document.getElementById('orders table').value;
+    const table = document.getElementById('Orders table').value;
+    const groups = document.getElementById('Groups').value;
+    const moveToSlow = document.getElementById('Move to slow').value;
     const command = {
         topic: 'start',
-        payload: table,
+        payload: {
+            table,
+            groups,
+            moveToSlow
+        }
     };
     ws.send(JSON.stringify(command));
 };
 
 const onJumpClick = () => {
-    const numberOfDays = document.getElementById('numberOfDays').value;
+    const numberOfPeriods = document.getElementById('numberOfPeriods').value;
     const command = {
         topic: 'jump',
-        payload: numberOfDays,
+        payload: numberOfPeriods,
     };
     ws.send(JSON.stringify(command));
 };
 
 const json2Table = (json) => {
-    console.log(json);
-    console.log(json[0]);
     //https://dev.to/boxofcereal/how-to-generate-a-table-from-json-data-with-es6-methods-2eel
     let cols = Object.keys(json[0]);
     let headerRow = cols
@@ -32,7 +36,6 @@ const json2Table = (json) => {
         })
         .join("  ");
 
-    //build the table
     const table = `
     <table>
       <thead>
@@ -90,18 +93,11 @@ document.getElementById('svg1').addEventListener('load', function () {
     panZoom.zoom(1);
     panZoom.fit();
     panZoom.resize();
-
-    $(window).resize(function () {
-        panZoom.resize();
-        panZoom.fit();
-        panZoom.center();
-    })
 })
 
 const table = document.getElementById('table');
 let dataForTable = [];
 let dates = [];
-
 
 const ws = new WebSocket('ws://localhost:9615/');
 ws.onopen = function () {
@@ -118,14 +114,14 @@ ws.onmessage = function (e) {
         let html = '';
         let labelName;
         for (const input of message.payload) {
-            if (input.name === 'orders table') {
-                labelName = 'Table name:';
-            }
-            if (input.name === 'date') {
-                labelName = 'Date:';
-            }
+            // if (input.name === 'orders table') {
+            //     labelName = 'Table name:';
+            // }
+            // if (input.name === 'date') {
+            //     labelName = 'Date:';
+            // }
 
-            html += `<label for="${input.name}"> ${labelName} </label>
+            html += `<label for="${input.name}"> ${input.name}: </label>
                 <textarea id="${input.name}" name="${input.name}" rows="1" cols="20"> </textarea>
                 <br>`;
         }
