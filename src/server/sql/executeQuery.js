@@ -1,5 +1,5 @@
 import connectToDatabase from './workWithSQL.js'
-import chunk from 'lodash'
+import _ from 'lodash'
 import cache from '../cache.js'
 
 
@@ -28,12 +28,22 @@ const executeQuery = async (action, tableName) => {
         console.log(`table truncated`);
         console.log(write);
         console.log(cache.dataForMySql);
-        const dataChunked = chunk(cache.dataForMySql, 10000);
-        // console.log(dataChunked);
-        dataChunked.map(async (chunk) => {
-          // console.log(chunk);
-          await db.query(write, [chunk]);
-        });
+        const dataChunked = _.chunk(cache.dataForMySql, 10);
+
+        for (const chunk of dataChunked) {
+          const items = chunk.map(item => [
+            item.dte,
+            item.sku,
+            item.qty,
+            item.rackNum,
+            item.carton,
+            item.grp
+          ]);
+          console.log(`Writing chunk of length ${items.length}:`);
+          console.log(JSON.stringify(items))
+          await db.query(write, [items]);
+          console.log(`Chunk has been written`);
+        }
         break;
     }
   } catch (error) {
