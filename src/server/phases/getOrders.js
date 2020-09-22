@@ -1,10 +1,10 @@
 import cache from '../cache.js';
 import groupBy from '../utils/groupBy.js';
-import getData from '../sql/getData.js'
+import executeQuery from '../sql/executeQuery.js'
 
 const getOrders = async () => {
     if (cache.ords == undefined) {
-        cache.ords = await getData(cache.table);
+        cache.ords = await executeQuery(getData, cache.table);
     }
 
     const svgUpdate = [];

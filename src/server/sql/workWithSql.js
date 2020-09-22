@@ -2,7 +2,20 @@ import mysql from 'mysql';
 import util from 'util';
 
 
-function connectToDatabase(config) {
+const connectToDatabase = () => {
+    // const config = connectToDatabase({
+    //     host: '192.168.1.210',//localhost
+    //     user: "remoteuser",//root
+    //     password: "remoteuser",//password
+    //     database: "japan",//japan
+    // });
+
+    const config = {
+        host: 'localhost',
+        user: 'root',
+        password: 'password',
+        database: 'japan'
+    };
     const connection = mysql.createConnection(config);
     connection.connect();
     return {
@@ -15,11 +28,5 @@ function connectToDatabase(config) {
     };
 }
 
-const db = connectToDatabase({
-    host: '192.168.1.210',//localhost 192.168.1.210
-    user: "remoteuser",//root remoteuser
-    password: "remoteuser",//password remoteuser
-    database: "japan",//japan
-});
 
-export default db;
+export default connectToDatabase;

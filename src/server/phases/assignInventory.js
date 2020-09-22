@@ -22,6 +22,8 @@ const assignInventory = () => {
         }
     }
 
+    cache.dataForMySql = ords3;
+
     cache.cases = cache.cases.filter(rck => { if (rck.qty > 0) { return true } else { return false } })
     let rackQtyEnd = 0
     for (var rack of cache.cases) { rackQtyEnd += rack.qty }

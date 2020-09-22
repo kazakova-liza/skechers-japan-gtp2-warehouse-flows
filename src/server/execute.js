@@ -41,7 +41,7 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                 }
                 const htmlUpdate = [{ id: 'phase', value: el.textOnCompletion }];
                 cache.connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate }));
-                cache.connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate }));
+                cache.connection.sendUTF(JSON.stringify({ topic: 'variablesUpdate', payload: svgUpdate }));
             }
         }
         else {
@@ -68,9 +68,11 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                         value: currentPhase.textOnCompletion
                     }]
             }));
-            cache.connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: svgUpdate }));
+            cache.connection.sendUTF(JSON.stringify({ topic: 'variablesUpdate', payload: svgUpdate }));
         }
-
+        if (i !== cache.currentPeriod + parseInt(numberOfPeriodsToExecute) - 1) {
+            cache.connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
+        }
     }
     const t2 = Date.now();
 

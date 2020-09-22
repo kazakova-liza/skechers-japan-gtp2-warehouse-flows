@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import websocket from 'websocket';
 import objects from './objects.js';
-import getData from './sql/getData.js';
+import executeQuery from './sql/executeQuery.js';
 import execute from './execute.js';
 import cache from './cache.js';
 
@@ -87,6 +87,7 @@ const main = async () => {
                 cache.connection.sendUTF(JSON.stringify({ topic: 'inputs', payload: objects.inputs }));
             }
             if (command.topic === 'jump') {
+                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
                 if (cache.currentPhase < maxPhase) {
                     numberOfPeriodsToExecute = 1;
                     await execute(numberOfPeriodsToExecute, 'all');
@@ -95,8 +96,10 @@ const main = async () => {
                 numberOfPeriodsToExecute = command.payload;
                 await execute(numberOfPeriodsToExecute, 'all');
                 cache.currentPeriod = cache.currentPeriod + numberOfPeriodsToExecute - 1;
+                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'start') {
+                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
                 numberOfPeriodsToExecute = 1;
                 cache.currentPhase = 1;
                 cache.currentPeriod = 0;
@@ -105,24 +108,34 @@ const main = async () => {
                 cache.table = command.payload.table;
                 cache.groups = command.payload.groups;
                 cache.daysbeforeArchiveToSlow = command.payload.moveToSlow;
-                cache.ords = await getData(cache.table);
+                cache.ords = await executeQuery('getData', cache.table);
                 await execute(numberOfPeriodsToExecute);
+                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'phase++') {
+                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
                 numberOfPeriodsToExecute = 1;
                 cache.currentPhase++;
                 await execute(numberOfPeriodsToExecute);
+                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'period++') {
+                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
                 cache.currentPhase = 1;
                 numberOfPeriodsToExecute = 1;
                 cache.currentPeriod++;
                 cache.connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
                 await execute(numberOfPeriodsToExecute);
+                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'execute period') {
+                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
                 numberOfPeriodsToExecute = 1;
                 await execute(numberOfPeriodsToExecute, 'all');
+                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
+            }
+            if (command.topic === 'dump') {
+                await executeQuery('write', command.payload);
             }
         });
 

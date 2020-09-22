@@ -35,8 +35,8 @@ const onJumpClick = () => {
 const onDumpClick = () => {
     const command = {
         topic: 'dump',
-        payload: dataForTable,
-    };
+        payload: document.getElementById('mySQLTable').value
+    }
     ws.send(JSON.stringify(command));
 };
 
@@ -155,14 +155,26 @@ ws.onmessage = function (e) {
         inputs.innerHTML = html;
     }
 
-    if (message.topic == 'svgUpdate') {
-        console.log(message);
+    if (message.topic == 'disableButtons') {
+        document.getElementById('period++').disabled = true;
+        document.getElementById('phase++').disabled = true;
+        document.getElementById('execute period').disabled = true;
+        document.getElementById('jump').disabled = true;
+        document.getElementById('dump').disabled = true;
+        document.getElementById('start').disabled = true;
+    }
+
+    if (message.topic == 'enableButtons') {
         document.getElementById('period++').disabled = false;
         document.getElementById('phase++').disabled = false;
         document.getElementById('execute period').disabled = false;
         document.getElementById('jump').disabled = false;
         document.getElementById('dump').disabled = false;
         document.getElementById('start').disabled = false;
+    }
+
+    if (message.topic == 'variablesUpdate') {
+        console.log(message);
         for (element of message.payload) {
             const a = document.getElementById('svg1');
             const svgDoc = a.contentDocument;
