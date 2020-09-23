@@ -33,6 +33,13 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
         }));
         if (phase === 'all') {
             for (const el of objects.phases) {
+                cache.connection.sendUTF(JSON.stringify({
+                    topic: 'svgUpdate',
+                    payload: {
+                        id: el.svgTransitionElementId,
+                        color: "#ff8000"
+                    }
+                }));
                 if (el.async !== undefined) {
                     svgUpdate = await el.function();
                 }
@@ -40,6 +47,14 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                     svgUpdate = el.function();
                 }
                 const htmlUpdate = [{ id: 'phase', value: el.textOnCompletion }];
+                cache.connection.sendUTF(JSON.stringify({
+                    topic: 'svgUpdate',
+                    payload: {
+                        id: el.svgTransitionElementId,
+                        color: "#bfbfbf"
+                    }
+                }));
+                cache.connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: el.svgTransitionElementId }));
                 cache.connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate }));
                 cache.connection.sendUTF(JSON.stringify({ topic: 'variablesUpdate', payload: svgUpdate }));
             }
@@ -54,6 +69,13 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                         value: currentPhase.textOnProcessing
                     }]
             }));
+            cache.connection.sendUTF(JSON.stringify({
+                topic: 'svgUpdate',
+                payload: {
+                    id: currentPhase.svgTransitionElementId,
+                    color: "#ff8000"
+                }
+            }));
             if (currentPhase.async !== undefined) {
                 svgUpdate = await currentPhase.function();
             }
@@ -67,6 +89,13 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                         id: 'phase',
                         value: currentPhase.textOnCompletion
                     }]
+            }));
+            cache.connection.sendUTF(JSON.stringify({
+                topic: 'svgUpdate',
+                payload: {
+                    id: currentPhase.svgTransitionElementId,
+                    color: "#bfbfbf"
+                }
             }));
             cache.connection.sendUTF(JSON.stringify({ topic: 'variablesUpdate', payload: svgUpdate }));
         }

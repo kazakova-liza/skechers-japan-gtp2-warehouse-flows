@@ -84,7 +84,7 @@ const objects = {
             function: getInventory,
             textOnProcessing: "getting current inventory",
             textOnCompletion: "got current inventory",
-            svgTransitionElementId: 'svg_53',
+            svgTransitionElementId: 'svg_42',
         },
         {
             number: 8,
@@ -100,7 +100,7 @@ const objects = {
             function: makeReplens,
             textOnProcessing: "calculating what needs replenishment",
             textOnCompletion: "calculated what needs replenishment",
-            svgTransitionElementId: 'svg_75',
+            svgTransitionElementId: 'svg_82',
         },
         {
             number: 10,

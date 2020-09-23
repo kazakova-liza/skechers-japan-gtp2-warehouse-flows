@@ -222,5 +222,14 @@ ws.onmessage = function (e) {
             document.getElementById(element.id).textContent = element.value;
         }
     }
+
+    if (message.topic === 'svgUpdate') {
+        console.log(message);
+        const a = document.getElementById('svg1');
+        const svgDoc = a.contentDocument;
+        const elementToUpdate = svgDoc.getElementById(message.payload.id);
+        console.log(elementToUpdate);
+        elementToUpdate.style.fill = message.payload.color;
+    }
 };
 
