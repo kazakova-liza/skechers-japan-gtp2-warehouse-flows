@@ -2,15 +2,12 @@ let dataForTable = [];
 let dates = [];
 
 const onStartClick = () => {
-    const table = document.getElementById('Orders table').value;
-    const groups = document.getElementById('Groups').value;
-    const moveToSlow = document.getElementById('Move to slow').value;
+    const table = document.getElementById('Variables table').value;
+
     const command = {
         topic: 'start',
         payload: {
             table,
-            groups,
-            moveToSlow
         }
     };
     ws.send(JSON.stringify(command));
@@ -20,7 +17,7 @@ const onStartClick = () => {
 const onJumpClick = () => {
     document.getElementById('period++').disabled = true;
     document.getElementById('phase++').disabled = true;
-    document.getElementById('execute period').disabled = true;
+    // document.getElementById('execute period').disabled = true;
     document.getElementById('jump').disabled = true;
     document.getElementById('dump').disabled = true;
     document.getElementById('start').disabled = true;
@@ -67,18 +64,18 @@ const json2Table = (json) => {
     return table;
 }
 
-const onExecutePeriodClick = () => {
-    document.getElementById('period++').disabled = true;
-    document.getElementById('phase++').disabled = true;
-    document.getElementById('execute period').disabled = true;
-    document.getElementById('jump').disabled = true;
-    document.getElementById('dump').disabled = true;
-    document.getElementById('start').disabled = true;
-    const command = {
-        topic: 'execute period',
-    };
-    ws.send(JSON.stringify(command));
-};
+// const onExecutePeriodClick = () => {
+//     document.getElementById('period++').disabled = true;
+//     document.getElementById('phase++').disabled = true;
+//     document.getElementById('execute period').disabled = true;
+//     document.getElementById('jump').disabled = true;
+//     document.getElementById('dump').disabled = true;
+//     document.getElementById('start').disabled = true;
+//     const command = {
+//         topic: 'execute period',
+//     };
+//     ws.send(JSON.stringify(command));
+// };
 
 const onStopClick = () => {
     const command = {
@@ -90,7 +87,7 @@ const onStopClick = () => {
 const onPhaseClick = () => {
     document.getElementById('period++').disabled = true;
     document.getElementById('phase++').disabled = true;
-    document.getElementById('execute period').disabled = true;
+    // document.getElementById('execute period').disabled = true;
     document.getElementById('jump').disabled = true;
     document.getElementById('dump').disabled = true;
     document.getElementById('start').disabled = true;
@@ -104,7 +101,7 @@ const onPhaseClick = () => {
 const onPeriodClick = () => {
     document.getElementById('period++').disabled = true;
     document.getElementById('phase++').disabled = true;
-    document.getElementById('execute period').disabled = true;
+    // document.getElementById('execute period').disabled = true;
     document.getElementById('jump').disabled = true;
     document.getElementById('dump').disabled = true;
     document.getElementById('start').disabled = true;
@@ -158,7 +155,7 @@ ws.onmessage = function (e) {
     if (message.topic == 'disableButtons') {
         document.getElementById('period++').disabled = true;
         document.getElementById('phase++').disabled = true;
-        document.getElementById('execute period').disabled = true;
+        // document.getElementById('execute period').disabled = true;
         document.getElementById('jump').disabled = true;
         document.getElementById('dump').disabled = true;
         document.getElementById('start').disabled = true;
@@ -167,7 +164,7 @@ ws.onmessage = function (e) {
     if (message.topic == 'enableButtons') {
         document.getElementById('period++').disabled = false;
         document.getElementById('phase++').disabled = false;
-        document.getElementById('execute period').disabled = false;
+        // document.getElementById('execute period').disabled = false;
         document.getElementById('jump').disabled = false;
         document.getElementById('dump').disabled = false;
         document.getElementById('start').disabled = false;
@@ -176,9 +173,17 @@ ws.onmessage = function (e) {
     if (message.topic == 'variablesUpdate') {
         console.log(message);
         for (element of message.payload) {
+            console.log(element);
             const a = document.getElementById('svg1');
             const svgDoc = a.contentDocument;
-            svgDoc.getElementById(element.id).textContent = element.value;
+            const el = svgDoc.getElementById(element.id);
+            if (el.getElementsByTagName('tspan') !== undefined) {
+                const tspans = el.getElementsByTagName('tspan');
+                tspans[0].textContent = element.value;
+            }
+            else {
+                svgDoc.getElementById(element.id).textContent = element.value;
+            }
             const currentDate = document.getElementById('period').textContent;
             if (dataForTable.length === 0) {
                 dataForTable.push({

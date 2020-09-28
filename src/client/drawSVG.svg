@@ -1,186 +1,693 @@
-<?xml version="1.0"?>
-<svg width="5000" height="1500" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
- <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
- <metadata id="metadata244">image/svg+xml</metadata>
- <g class="layer" id="g236">
-  <title>Layer 1</title>
-  <rect fill="#d4ffaa" height="178.999999" id="svg_24" stroke="#000000" stroke-width="5" width="354.999968" x="1168.000007" y="419.499996"/>
-  <rect fill="#d4ffaa" height="101.000002" id="svg_11" stroke="#000000" stroke-width="5" width="127" x="939.999999" y="559.499997"/>
-  <rect fill="#d4ffaa" height="109.000001" id="svg_29" stroke="#000000" stroke-width="5" width="237.999993" x="263.999998" y="134"/>
-  <rect fill="#d4ffaa" height="189" id="svg_56" stroke="#000000" stroke-width="5" width="160.000008" x="851.666637" y="13.5"/>
-  <rect fill="#d4ffaa" height="189" id="svg_16" stroke="#000000" stroke-width="5" width="168.000001" x="11.166667" y="72.5"/>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="allCtns" stroke="#000000" stroke-width="0" text-anchor="middle" x="134.166667" xml:space="preserve" y="136.5">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="allLines" stroke="#000000" stroke-width="0" text-anchor="middle" x="134.166667" xml:space="preserve" y="164.5">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="allPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="134.166667" xml:space="preserve" y="198.5">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="allSkus" stroke="#000000" stroke-width="0" text-anchor="middle" x="134.166667" xml:space="preserve" y="226.5">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_6" stroke="#000000" stroke-width="0" text-anchor="middle" x="86.503882" xml:space="preserve" y="104.011706">Todays orders</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_7" stroke="#000000" stroke-width="0" text-anchor="middle" x="68.503882" xml:space="preserve" y="135.011706">Cartons</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_8" stroke="#000000" stroke-width="0" text-anchor="middle" x="60.503882" xml:space="preserve" y="165.011706">Lines</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_9" stroke="#000000" stroke-width="0" text-anchor="middle" x="59.503882" xml:space="preserve" y="198.011706">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_10" stroke="#000000" stroke-width="0" text-anchor="middle" x="62.662695" xml:space="preserve" y="228.496081">SKUs</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="posCtns" stroke="#000000" stroke-width="0" text-anchor="middle" x="420.999999" xml:space="preserve" y="195">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="posStyleCol" stroke="#000000" stroke-width="0" text-anchor="middle" x="420.999999" xml:space="preserve" y="225">-</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_23" stroke="#000000" stroke-width="0" text-anchor="middle" x="314.337214" xml:space="preserve" y="195.511706">Cartons</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="posStyleColor" stroke="#000000" stroke-width="0" text-anchor="middle" x="337.337214" xml:space="preserve" y="222.511706">Style / Colors</text>
-  <rect fill="#d4ffaa" height="109" id="svg_36" stroke="#000000" stroke-width="5" width="127" x="595.666625" y="167"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_35" stroke="#000000" stroke-width="0" text-anchor="middle" x="658.00384" xml:space="preserve" y="195.329013">Eligible</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="eligibleStyleColor" stroke="#000000" stroke-width="0" text-anchor="middle" x="654.666625" xml:space="preserve" y="256.605769">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_38" stroke="#000000" stroke-width="0" text-anchor="middle" x="657.326716" xml:space="preserve" y="223.457619">style/color</text>
-  <g id="svg_40" transform="rotate(1.44786 541.869 215.835)">
-   <path d="m542.52734,247.08291l61.86164,-32.03435l-62.67504,-30.46129l0.20335,15.62391l-62.56796,0.79032l0.4067,31.24781l62.56796,-0.79031l0.20335,15.62391l0,0z" fill="#bfbfbf" id="svg_32" stroke="#000000" stroke-width="0"/>
-   <text fill="#000000" font-family="serif" font-size="24" id="svg_31" stroke="#000000" stroke-width="0" text-anchor="middle" x="532.279434" xml:space="preserve" y="223.6372">250+Pairs</text>
-  </g>
-  <ellipse cx="674.166693" cy="86.5" fill="#bfbfbf" id="svg_41" rx="41" ry="24" stroke="#000000" stroke-width="0"/>
-  <path d="m682.20935,135.87412l-16.758,-30.92112l-16.75799,30.92112l8.379,0l0,31.06991l16.75799,0l0,-31.06991l8.379,0l0,0z" fill="#bfbfbf" id="svg_43" stroke="#000000" stroke-width="0" transform="rotate(26.4874 665.451 135.949)"/>
-  <path d="m797.92462,67.338l-16.75799,-67.33352l-16.758,67.33352l8.379,0l0,67.65751l16.75799,0l0,-67.65751l8.379,0l0,0z" fill="#bfbfbf" id="svg_44" stroke="#000000" stroke-width="0" transform="rotate(77.2063 781.167 67.5)"/>
-  <path d="m1028.42462,531.44721l-16.75799,-21.94272l-16.758,21.94272l8.379,0l0,22.0483l16.75799,0l0,-22.0483l8.379,0l0,0z" fill="#bfbfbf" id="svg_45" stroke="#000000" stroke-width="0" transform="rotate(2.31074 1011.67 531.5)"/>
-  <path d="m434.92502,84.90678l-16.758,-246.40269l-16.75799,246.40269l8.379,0l0,247.58835l16.75799,0l0,-247.58834l8.379,0l0,0l0,-0.00001z" fill="#bfbfbf" id="svg_46" stroke="#000000" stroke-width="0" transform="rotate(90 418.167 85.4996)"/>
-  <text fill="#000000" font-family="serif" font-size="20px" id="svg_47" stroke="#000000" stroke-width="0" text-anchor="middle" x="892.26459" xml:space="preserve" y="168.49608">SKUs</text>
-  <text fill="#000000" font-family="serif" font-size="20px" id="svg_48" stroke="#000000" stroke-width="0" text-anchor="middle" x="889.28607" xml:space="preserve" y="137.52342">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="20px" id="svg_49" stroke="#000000" stroke-width="0" text-anchor="middle" x="891.43451" xml:space="preserve" y="106.36034">Lines</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_50" stroke="#000000" stroke-width="0" text-anchor="middle" x="900.003851" xml:space="preserve" y="75.011706">Cartons</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_51" stroke="#000000" stroke-width="0" text-anchor="middle" x="932.003851" xml:space="preserve" y="41.011706">Key orders</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="keySkus" stroke="#000000" stroke-width="0" text-anchor="middle" x="974.666636" xml:space="preserve" y="170.5">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20px" id="keyPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="973.66663" xml:space="preserve" y="139.16667">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20px" id="keyLines" stroke="#000000" stroke-width="0" text-anchor="middle" x="973.66663" xml:space="preserve" y="107.83334">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="keyCtns" stroke="#000000" stroke-width="0" text-anchor="middle" x="974.666636" xml:space="preserve" y="76.5">-</text>
-  <path d="m244.9131,158.82451l-31.25039,-52.14874l-31.25039,52.14874l15.6252,0l0,52.39967l31.25038,0l0,-52.39967l15.6252,0l0,0z" fill="#bfbfbf" id="svg_18" stroke="#000000" stroke-width="0" transform="rotate(120.107 213.663 158.95)"/>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_17" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(30.8416 214.445 147.992)" x="214.450627" xml:space="preserve" y="155.743864">3+Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_19" stroke="#000000" stroke-width="0" text-anchor="middle" transform="rotate(30.8416 203.57 163.82)" x="203.568553" xml:space="preserve" y="171.5697">3-styles</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_58" stroke="#000000" stroke-width="0" text-anchor="middle" x="378.667902" xml:space="preserve" y="157.996081">Possible style/colors</text>
-  <path d="m777.03307,206.27967l-16.75799,-114.4991l-16.758,114.4991l8.379,0l0,115.05005l16.75799,0l0,-115.05005l8.379,0l0,0z" fill="#bfbfbf" id="svg_59" stroke="#000000" stroke-width="0" transform="rotate(154.548 760.275 206.555)"/>
-  <rect fill="#d4ffaa" height="189" id="svg_69" stroke="#000000" stroke-width="5" width="169" x="715.699962" y="307.299988"/>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_68" stroke="#000000" stroke-width="0" text-anchor="middle" x="757.19599" xml:space="preserve" y="463.296068">SKUs</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_67" stroke="#000000" stroke-width="0" text-anchor="middle" x="753.037176" xml:space="preserve" y="431.811693">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_66" stroke="#000000" stroke-width="0" text-anchor="middle" x="753.037176" xml:space="preserve" y="398.811693">Lines</text>
-  <text fill="#000000" font-family="serif" font-size="20" id="svg_65" stroke="#000000" stroke-width="0" text-anchor="middle" x="761.037176" xml:space="preserve" y="368.811693">Cartons</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_64" stroke="#000000" stroke-width="0" text-anchor="middle" x="800.037176" xml:space="preserve" y="338.811693">Active orders</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="activeSkus" stroke="#000000" stroke-width="0" text-anchor="middle" x="830.699961" xml:space="preserve" y="465.299988">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="activePairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="828.699961" xml:space="preserve" y="433.299988">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="activeLines" stroke="#000000" stroke-width="0" text-anchor="middle" x="827.699961" xml:space="preserve" y="399.299988">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="activeCtns" stroke="#000000" stroke-width="0" text-anchor="middle" x="827.699961" xml:space="preserve" y="367.299988">-</text>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_70" stroke="#000000" stroke-width="0" text-anchor="middle" x="671.7" xml:space="preserve" y="95.3">Split</text>
-  <ellipse cx="803.094113" cy="600.142032" fill="#bfbfbf" id="svg_73" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <path d="m826.35247,525.07927l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_72" stroke="#000000" stroke-width="0" transform="rotate(-177.909 809.594 525.142)"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_71" stroke="#000000" stroke-width="0" text-anchor="middle" x="802.127422" xml:space="preserve" y="609.942029">affinity</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="matrixSize" stroke="#000000" stroke-width="0" text-anchor="middle" x="1001.504649" xml:space="preserve" y="643.9953">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="groups" stroke="#000000" stroke-width="0" text-anchor="middle" x="1450.496836" xml:space="preserve" y="482.003113">-</text>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_2" stroke="#000000" stroke-width="0" text-anchor="middle" x="802.502422" xml:space="preserve" y="578.496716">Make</text>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_3" stroke="#000000" stroke-width="0" text-anchor="middle" x="799.502422" xml:space="preserve" y="640.504529">matrix</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_5" stroke="#000000" stroke-width="0" text-anchor="middle" x="1001.337214" xml:space="preserve" y="585.829013">Matrix</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_4" stroke="#000000" stroke-width="0" text-anchor="middle" x="1004.66009" xml:space="preserve" y="608.957619">records</text>
-  <path d="m929.25799,601.4376l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.05791l16.75799,0l0,-26.05791l8.379,0l0,0z" fill="#bfbfbf" id="svg_12" stroke="#000000" stroke-width="0" transform="rotate(91.273 912.5 601.5)"/>
-  <ellipse cx="1026.499997" cy="456.500003" fill="#bfbfbf" id="svg_20" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_15" stroke="#000000" stroke-width="0" text-anchor="middle" x="1025.533306" xml:space="preserve" y="466.3">affinity</text>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_14" stroke="#000000" stroke-width="0" text-anchor="middle" x="1024.908306" xml:space="preserve" y="434.854688">Make</text>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_13" stroke="#000000" stroke-width="0" text-anchor="middle" x="1021.908306" xml:space="preserve" y="496.8625">groups</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_22" stroke="#000000" stroke-width="0" text-anchor="middle" x="1330.337214" xml:space="preserve" y="444.829013">Groups</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_21" stroke="#000000" stroke-width="0" text-anchor="middle" x="1206.66009" xml:space="preserve" y="477.957619">Groups</text>
-  <path d="m1150.25799,453.43767l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_25" stroke="#000000" stroke-width="0" transform="rotate(90 1133.5 453.5)"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_26" stroke="#000000" stroke-width="0" text-anchor="middle" x="1286.855403" xml:space="preserve" y="509.473244">Average lines per group</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_30" stroke="#000000" stroke-width="0" text-anchor="middle" x="1299.00384" xml:space="preserve" y="539.996682">Average cartons per group</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_33" stroke="#000000" stroke-width="0" text-anchor="middle" x="1292.996028" xml:space="preserve" y="570.004494">Average SKUs per group</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="groupAvgLines" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="1450.5" xml:space="preserve" y="512.540111">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="groupAvgCartons" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="1450.5" xml:space="preserve" y="538.719276">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="groupAvgSkus" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="1452.5" xml:space="preserve" y="565.399191">-</text>
-  <path d="m1574.25799,510.93767l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_39" stroke="#000000" stroke-width="0" transform="rotate(90 1557.5 511)"/>
-  <ellipse cx="1668.499997" cy="507.999999" fill="#bfbfbf" id="svg_42" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_52" stroke="#000000" stroke-width="0" text-anchor="middle" x="1668.502056" xml:space="preserve" y="492.503126">Get</text>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_53" stroke="#000000" stroke-width="0" text-anchor="middle" x="1666.494244" xml:space="preserve" y="524.495312">inventory</text>
-  <rect fill="#ffff00" height="379.000008" id="svg_55" stroke="#000000" stroke-width="5" width="158.999989" x="1626.000005" y="27.499998"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_57" stroke="#000000" stroke-width="0" text-anchor="middle" x="1674.496028" xml:space="preserve" y="132.496682">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_60" stroke="#000000" stroke-width="0" text-anchor="middle" x="1671.50384" xml:space="preserve" y="167.504494">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_61" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="1706.501277" xml:space="preserve" y="99.493076">Start</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowStartCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="1748.504649" xml:space="preserve" y="130.4953">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowStartPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="1748.504649" xml:space="preserve" y="162.4953">-</text>
-  <path d="m1832.25797,333.93767l-16.75799,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.37899,0l0,0z" fill="#bfbfbf" id="svg_74" stroke="#000000" stroke-width="0" transform="rotate(90 1815.5 334)"/>
-  <ellipse cx="1923.499997" cy="334.999995" fill="#bfbfbf" id="svg_75" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_76" stroke="#000000" stroke-width="0" text-anchor="middle" x="1923.494244" xml:space="preserve" y="339.503125">Replenish</text>
-  <path d="m2096.75796,331.82841l-16.758,-71.32397l-16.75799,71.32397l8.379,0l0,71.66714l16.75799,0l0,-71.66714l8.379,0l0,0z" fill="#bfbfbf" id="svg_77" stroke="#000000" stroke-width="0" transform="rotate(90 2080 332)"/>
-  <rect fill="#ffff56" height="665.000038" id="svg_78" stroke="#000000" stroke-width="5" width="162.99999" x="2149.000011" y="18.000024"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_79" stroke="#000000" stroke-width="0" text-anchor="middle" x="2188.03509" xml:space="preserve" y="355.504494">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_80" stroke="#000000" stroke-width="0" text-anchor="middle" x="2184.214778" xml:space="preserve" y="388.496682">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" font-weight="bold" id="svg_81" stroke="#000000" stroke-width="0" text-anchor="middle" x="2216.251277" xml:space="preserve" y="330.500888">Post replen</text>
-  <path d="m2353.25794,288.93761l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_84" stroke="#000000" stroke-width="0" transform="rotate(90 2336.5 289)"/>
-  <ellipse cx="2443.499997" cy="285.999992" fill="#bfbfbf" id="svg_85" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_86" stroke="#000000" stroke-width="0" text-anchor="middle" x="2440.486431" xml:space="preserve" y="264.495313">Assign</text>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_87" stroke="#000000" stroke-width="0" text-anchor="middle" x="2442.494244" xml:space="preserve" y="298.503125">inventory</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_92" stroke="#000000" stroke-width="0" text-anchor="middle" x="2188.037348" xml:space="preserve" y="486.004525">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_91" stroke="#000000" stroke-width="0" text-anchor="middle" x="2184.217036" xml:space="preserve" y="519.996713">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" font-weight="bold" id="svg_90" stroke="#000000" stroke-width="0" text-anchor="middle" x="2206.878535" xml:space="preserve" y="456.000919">Post Pick</text>
-  <path d="m2474.803601,377.402529l-16.758,-35.898158l-16.75799,35.898158l8.379,0l0,36.070886l16.75799,0l0,-36.070886l8.379,0l0,0z" fill="#bfbfbf" id="svg_37" stroke="#000000" stroke-width="0" transform="rotate(179.75 2458.05 377.489)"/>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMid2Cases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.637461" xml:space="preserve" y="359.003113">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMid2Pairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.637461" xml:space="preserve" y="388.003113">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invEndCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.637461" xml:space="preserve" y="617.003113">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invEndPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.637461" xml:space="preserve" y="649.003113">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invReplens" stroke="#000000" stroke-width="0" text-anchor="middle" x="2115.410898" xml:space="preserve" y="607.2453">-</text>
-  <path d="m1969.8086,506.900657l-16.758,-201.10254l-16.75799,201.10254l8.379,0l0,202.070172l16.75799,0l0,-202.070172l8.379,0l0,0z" fill="#bfbfbf" id="svg_98" stroke="#000000" stroke-width="0" transform="rotate(90.8077 1953.05 507.384)"/>
-  <rect fill="#ffff56" height="124.000005" id="svg_97" stroke="#000000" stroke-width="5" width="162.99999" x="1612.144511" y="587.35983"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_96" stroke="#000000" stroke-width="0" text-anchor="middle" x="2188.046786" xml:space="preserve" y="122.356515">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_95" stroke="#000000" stroke-width="0" text-anchor="middle" x="2184.210848" xml:space="preserve" y="157.364327">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" font-weight="bold" id="svg_94" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2186.114535" xml:space="preserve" y="87.352909">Start</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invStartC" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.633532" xml:space="preserve" y="120.355133">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invStartP" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.633532" xml:space="preserve" y="151.355133">-</text>
-  <path d="m1824.40248,634.7975l-16.758,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.379,0l0,0z" fill="#bfbfbf" id="svg_83" stroke="#000000" stroke-width="0" transform="rotate(90 1807.64 634.86)"/>
-  <ellipse cx="1915.644505" cy="635.859828" fill="#bfbfbf" id="svg_82" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_63" stroke="#000000" stroke-width="0" text-anchor="middle" x="1915.638752" xml:space="preserve" y="640.362958">Replenish</text>
-  <path d="m2085.40247,632.69664l-16.758,-67.83231l-16.75799,67.83231l8.379,0l0,68.15869l16.75799,0l0,-68.15869l8.379,0l0,0z" fill="#bfbfbf" id="svg_62" stroke="#000000" stroke-width="0" transform="rotate(90 2068.64 632.86)"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_107" stroke="#000000" stroke-width="0" text-anchor="middle" x="2037.774066" xml:space="preserve" y="316.1078">Cases</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2101.782687" xml:space="preserve" y="384.106418">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_110" stroke="#000000" stroke-width="0" text-anchor="middle" x="2032.878841" xml:space="preserve" y="377.254494">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_114" stroke="#000000" stroke-width="0" text-anchor="middle" x="2037.813129" xml:space="preserve" y="611.881238">Cases</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invReplenQty" stroke="#000000" stroke-width="0" text-anchor="middle" x="2107.82175" xml:space="preserve" y="672.879856">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2119.82175" xml:space="preserve" y="308.879856">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_111" stroke="#000000" stroke-width="0" text-anchor="middle" x="2032.917903" xml:space="preserve" y="673.027932">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_115" stroke="#000000" stroke-width="0" text-anchor="middle" x="1702.52978" xml:space="preserve" y="654.170185">Reserve</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_1" stroke="#000000" stroke-width="0" text-anchor="middle" x="1702.946589" xml:space="preserve" y="60.500888">Slow</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_88" stroke="#000000" stroke-width="0" text-anchor="middle" x="1677.67016" xml:space="preserve" y="362.004525">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_54" stroke="#000000" stroke-width="0" text-anchor="middle" x="1679.662349" xml:space="preserve" y="400.996713">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_34" stroke="#000000" stroke-width="0" text-anchor="middle" x="1706.651972" xml:space="preserve" y="324.000919">End</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowEndCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="1746.160898" xml:space="preserve" y="366.003113">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowEndPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="1747.160898" xml:space="preserve" y="398.003113">-</text>
-  <path d="m2146.25797,147.93767l-16.75799,-25.93312l-16.75799,25.93312l8.379,0l0,26.0579l16.75799,0l0,-26.0579l8.37899,0l0,0z" fill="#bfbfbf" id="svg_106" stroke="#000000" stroke-width="0" transform="rotate(-91.6996 2129.5 148)"/>
-  <ellipse cx="2016.499997" cy="147.999995" fill="#bfbfbf" id="svg_105" rx="83.499999" ry="55.000003" stroke="#000000" stroke-width="0"/>
-  <text fill="#000000" font-family="serif" font-size="32" id="svg_103" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2014.494244" xml:space="preserve" y="161.503125">Archive</text>
-  <path d="m1878.75796,143.82841l-16.758,-71.32397l-16.75799,71.32397l8.379,0l0,71.66714l16.75799,0l0,-71.66714l8.379,0l0,0z" fill="#bfbfbf" id="svg_102" stroke="#000000" stroke-width="0" transform="rotate(-90.3067 1862 144)"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_101" stroke="#000000" stroke-width="0" text-anchor="middle" x="1819.774066" xml:space="preserve" y="128.1078">Cases</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowMovePairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="1883.782687" xml:space="preserve" y="196.106418">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_99" stroke="#000000" stroke-width="0" text-anchor="middle" x="1814.878841" xml:space="preserve" y="189.254494">Pairs</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowMoveCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="1901.82175" xml:space="preserve" y="120.879856">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_116" stroke="#000000" stroke-width="0" text-anchor="middle" x="1677.410091" xml:space="preserve" y="240.496682">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_113" stroke="#000000" stroke-width="0" text-anchor="middle" x="1674.417903" xml:space="preserve" y="275.504494">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_112" stroke="#000000" stroke-width="0" text-anchor="middle" x="1709.415339" xml:space="preserve" y="207.493076">Mid</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowMidCases" stroke="#000000" stroke-width="0" text-anchor="middle" x="1751.418711" xml:space="preserve" y="238.4953">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="slowMidPairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="1751.418711" xml:space="preserve" y="270.4953">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_121" stroke="#000000" stroke-width="0" text-anchor="middle" x="2188.04516" xml:space="preserve" y="612.754525">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_120" stroke="#000000" stroke-width="0" text-anchor="middle" x="2184.209224" xml:space="preserve" y="642.746713">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" font-weight="bold" id="svg_119" stroke="#000000" stroke-width="0" text-anchor="middle" x="2225.745722" xml:space="preserve" y="583.750919">Post slow out</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_126" stroke="#000000" stroke-width="0" text-anchor="middle" x="2188.042902" xml:space="preserve" y="245.254494">Cases</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_125" stroke="#000000" stroke-width="0" text-anchor="middle" x="2184.206966" xml:space="preserve" y="278.246682">Pairs</text>
-  <text fill="#000000" font-family="serif" font-size="23" font-weight="bold" id="svg_124" stroke="#000000" stroke-width="0" text-anchor="middle" x="2222.555964" xml:space="preserve" y="216.250888">Post Slow In</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMid1Cases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.629648" xml:space="preserve" y="248.753113">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMid1Pairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.629648" xml:space="preserve" y="277.753113">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMid3Cases" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.629648" xml:space="preserve" y="487.1203">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="invMid3Pairs" stroke="#000000" stroke-width="0" text-anchor="middle" x="2276.629648" xml:space="preserve" y="516.1203">-</text>
-  <rect fill="#d4ffaa" height="291.999986" id="svg_139" stroke="#000000" stroke-width="5" width="354.999968" x="2343.750007" y="408.749993"/>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="finGroups" stroke="#000000" stroke-width="0" text-anchor="middle" x="2632.246836" xml:space="preserve" y="473.253113">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_137" stroke="#000000" stroke-width="0" text-anchor="middle" x="2512.087214" xml:space="preserve" y="436.079013">Groups</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_136" stroke="#000000" stroke-width="0" text-anchor="middle" x="2388.41009" xml:space="preserve" y="469.207619">Groups</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_135" stroke="#000000" stroke-width="0" text-anchor="middle" x="2468.605403" xml:space="preserve" y="500.723244">Average lines per group</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_134" stroke="#000000" stroke-width="0" text-anchor="middle" x="2480.75384" xml:space="preserve" y="531.246682">Average cartons per group</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_133" stroke="#000000" stroke-width="0" text-anchor="middle" x="2474.746028" xml:space="preserve" y="561.254494">Average SKUs per group</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="finGroupAvgLines" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="2632.25" xml:space="preserve" y="504.490136">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="finGroupAvgCartons" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="2632.25" xml:space="preserve" y="530.669301">-</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="finGroupAvgSkus" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="2634.25" xml:space="preserve" y="557.349216">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_141" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2479.089778" xml:space="preserve" y="598.247078">Average pairs per group</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="finGroupAvgPairs" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="2638.59375" xml:space="preserve" y="591.382286">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_143" stroke="#000000" stroke-width="0" text-anchor="middle" x="2478.089778" xml:space="preserve" y="632.247078">Average cases per group</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="finGroupAvgRacks" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="2637.59375" xml:space="preserve" y="622.662187">-</text>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_145" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2480.058711" xml:space="preserve" y="666.283454">Average pairs per case</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="finAvgPairsPerCase" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1.08696 0 -48.0435)" x="2639.562683" xml:space="preserve" y="653.975554">-</text>
-  <path d="m2458.755888,206.778433l-16.75799,-21.94272l-16.758,21.94272l8.379,0l0,22.0483l16.75799,0l0,-22.0483l8.379,0l0,0z" fill="#bfbfbf" id="svg_146" stroke="#000000" stroke-width="0" transform="rotate(2.31074 2442 206.831)"/>
-  <rect fill="#d4ffaa" height="101.000002" id="svg_147" stroke="#000000" stroke-width="5" width="127" x="2384.499999" y="82.499997"/>
-  <text fill="#000000" font-family="serif" font-size="23" id="svg_148" stroke="#000000" stroke-width="0" style="cursor: move;" text-anchor="middle" x="2444.722601" xml:space="preserve" y="111.253894">Robot visits</text>
-  <text class="variable" fill="#000000" font-family="serif" font-size="20" id="robotVisits" stroke="#000000" stroke-width="0" text-anchor="middle" x="2446.750719" xml:space="preserve" y="160.753571">-</text>
- </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1694px" height="1244px" viewBox="0 0 1694 1244" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <title>drawSVG 2</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="drawSVG" transform="translate(3.000000, 2.000000)" fill-rule="nonzero">
+            <polygon id="Line" fill="#979797" points="27.2474274 42.2474293 27.2499991 45.7474284 27.721 687.747 43.7217067 687.735683 24.2503674 726.75 4.72171725 687.764338 20.721 687.752 20.2500009 45.7525716 20.2474293 42.2525726"></polygon>
+            <polygon id="Line" fill="#979797" points="27.2474274 42.2474293 27.2499991 45.7474284 27.721 687.747 43.7217067 687.735683 24.2503674 726.75 4.72171725 687.764338 20.721 687.752 20.2500009 45.7525716 20.2474293 42.2525726"></polygon>
+            <polygon id="Line" fill="#979797" points="500.002025 41.9979763 507.002024 42.0020249 506.999999 45.5020243 506.897 223.127 522.897264 223.136285 503.374711 262.125 483.89727 223.113728 499.897 223.122 500.000001 45.4979757"></polygon>
+            <polygon id="Line" fill="#979797" points="500.002025 41.9979763 507.002024 42.0020249 506.999999 45.5020243 506.897 223.127 522.897264 223.136285 503.374711 262.125 483.89727 223.113728 499.897 223.122 500.000001 45.4979757"></polygon>
+            <polygon id="Line" fill="#979797" points="560.797863 77.2076967 599.882808 96.5368749 560.968499 116.207323 560.898 100.207 541.475 100.292 541.545887 116.292303 502.460942 96.9631251 541.375251 77.2926766 541.445 93.292 560.867 93.207"></polygon>
+            <polygon id="Line" fill="#979797" points="560.797863 77.2076967 599.882808 96.5368749 560.968499 116.207323 560.898 100.207 541.475 100.292 541.545887 116.292303 502.460942 96.9631251 541.375251 77.2926766 541.445 93.292 560.867 93.207"></polygon>
+            <polygon id="Line" fill="#979797" points="560.797863 77.2076967 599.882808 96.5368749 560.968499 116.207323 560.898 100.207 541.475 100.292 541.545887 116.292303 502.460942 96.9631251 541.375251 77.2926766 541.445 93.292 560.867 93.207"></polygon>
+            <g>
+                <rect id="svg_2" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="0.219971" y="0.723999" width="896.000045" height="37"></rect>
+                <g id="svg_3" transform="translate(371.000000, 4.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Receiving">
+                        <tspan x="0.502388" y="21.7539939">Receiving</tspan>
+                    </text>
+                </g>
+                <rect id="svg_4" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="602.219979" y="67.723999" width="203" height="60"></rect>
+                <g id="svg_5" transform="translate(606.000000, 68.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Pallet-Store-(cases)">
+                        <tspan x="0" y="21">Pallet Store (cases)</tspan>
+                    </text>
+                </g>
+                <g id="palletStoreCases2" transform="translate(679.000000, 98.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.237818" y="20.428158">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_11" stroke="#999999" fill="#FFFFFF" x="533" y="200" width="81" height="34.999996"></rect>
+                <g id="svg_12" transform="translate(541.000000, 204.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0" y="21">C</tspan>
+                    </text>
+                </g>
+                <g id="receivingToAPperSide1" transform="translate(574.000000, 208.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_14" stroke="#999999" fill="#FFFFFF" x="906" y="203" width="78" height="34.999996"></rect>
+                <g id="svg_15" transform="translate(908.000000, 206.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0" y="21">C</tspan>
+                    </text>
+                </g>
+                <g id="receivingToAPperSide2" transform="translate(937.000000, 209.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_18" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="502.219986" y="266.723999" width="389.999998" height="271.999992"></rect>
+                <g id="svg_19" transform="translate(540.000000, 294.000000)" fill="#000000" font-family="Helvetica" font-size="24" font-weight="normal">
+                    <text id="Cartons-all-840-(l)-x-640-(w)">
+                        <tspan x="0.5" y="23">Cartons all 840 (l) x 640 (w)</tspan>
+                    </text>
+                </g>
+                <g id="svg_20" transform="translate(624.000000, 350.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="shuttle">
+                        <tspan x="0.131875" y="21">shuttle</tspan>
+                    </text>
+                </g>
+                <rect id="svg_21" stroke="#AAD4FF" fill="#FFFFFF" x="550.000012" y="396" width="280.999991" height="27.999999"></rect>
+                <rect id="svg_22" stroke="#AAD4FF" fill="#FFFFFF" x="550.500012" y="430.500001" width="280.999991" height="27.999999"></rect>
+                <rect id="svg_23" stroke="#AAD4FF" fill="#FFFFFF" x="550.500012" y="467.500001" width="280.999991" height="27.999999"></rect>
+                <g id="svg_24" transform="translate(553.000000, 394.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Shuttle-in">
+                        <tspan x="0" y="21">Shuttle in</tspan>
+                    </text>
+                </g>
+                <g id="svg_25" transform="translate(551.000000, 431.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Shuttle-out">
+                        <tspan x="0" y="21.75">Shuttle out</tspan>
+                    </text>
+                </g>
+                <g id="svg_26" transform="translate(549.000000, 468.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Shuttle-store">
+                        <tspan x="0.518543" y="21.75">Shuttle store</tspan>
+                    </text>
+                </g>
+                <g id="shuttleIn" transform="translate(748.000000, 393.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.62366">-</tspan>
+                    </text>
+                </g>
+                <g id="shuttleOut" transform="translate(750.000000, 431.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.616505">-</tspan>
+                    </text>
+                </g>
+                <g id="shuttleSize" transform="translate(749.000000, 468.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.616504">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_30" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="94.000009" y="150" width="217" height="67"></rect>
+                <g id="Pallet-Store-(cases)" transform="translate(112.000000, 153.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0.274854" y="21.309121">Pallet Store (cases)</tspan>
+                    </text>
+                </g>
+                <g id="palletStoreCases1" transform="translate(179.000000, 182.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.018842" y="20.19482">-</tspan>
+                    </text>
+                </g>
+                <g id="svg_34" transform="translate(115.000000, 114.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Relay-&amp;-repack">
+                        <tspan x="0" y="21">Relay &amp; repack</tspan>
+                    </text>
+                </g>
+                <rect id="svg_35" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="113.00001" y="273" width="138.999996" height="45.999998"></rect>
+                <g id="Repack" transform="translate(142.000000, 282.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21">Repack</tspan>
+                    </text>
+                </g>
+                <rect id="svg_38" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="286.500007" y="273" width="124.999992" height="57.999996"></rect>
+                <g id="svg_39" transform="translate(293.000000, 274.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="GTP">
+                        <tspan x="0.580266" y="21.31343">GTP</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_40" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(455.977846, 274.199135) rotate(-90.199500) translate(-455.977846, -274.199135) " points="449.965587 274.097727 455.977846 231.947827 461.990105 274.097727 458.983975 274.097727 458.983975 316.450444 452.971716 316.450444 452.971716 274.097727 449.965586 274.097727"></polygon>
+                <polygon id="svg_41" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(460.009529, 330.983969) rotate(89.704700) translate(-460.009529, -330.983969) " points="453.998986 330.880164 460.009529 287.73443 466.020072 330.880164 463.0148 330.880164 463.0148 374.233508 457.004257 374.233508 457.004257 330.880164 453.998985 330.880164"></polygon>
+                <rect id="svg_42" stroke="#999999" fill="#FFFFFF" x="275.499983" y="303.000001" width="128.999991" height="34.999996"></rect>
+                <g id="svg_43" transform="translate(276.000000, 307.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Stations">
+                        <tspan x="0.907942" y="21.313429">Stations</tspan>
+                    </text>
+                </g>
+                <g id="GTPsPerSide1" transform="translate(369.000000, 310.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.623661">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_45" stroke="#999999" fill="#FFFFFF" x="417.499987" y="285.000001" width="74" height="32.999996"></rect>
+                <g id="svg_46" transform="translate(422.000000, 287.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0.001221" y="21.747437">C</tspan>
+                    </text>
+                </g>
+                <g id="gtpSideCasesPerHour1" transform="translate(451.000000, 288.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.623661">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_57" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="988.87078" y="272.909424" width="124.999992" height="57.999996"></rect>
+                <g id="svg_56" transform="translate(1001.000000, 272.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="GT">
+                        <tspan x="0.79319" y="21.222854">GT</tspan>
+                    </text>
+                    <text id="P">
+                        <tspan x="0.79319" y="47.222854">P</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_55" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(939.349270, 337.108362) rotate(-90.199500) translate(-939.349270, -337.108362) " points="933.337011 337.006953 939.34927 294.857053 945.361529 337.006953 942.355399 337.006953 942.355399 379.35967 936.34314 379.35967 936.34314 337.006953 933.33701 337.006953"></polygon>
+                <polygon id="svg_54" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(941.381104, 274.893740) rotate(89.704700) translate(-941.381104, -274.893740) " points="935.370561 274.789935 941.381104 231.644201 947.391647 274.789935 944.386375 274.789935 944.386375 318.143279 938.375832 318.143279 938.375832 274.789935 935.37056 274.789935"></polygon>
+                <rect id="svg_53" stroke="#999999" fill="#FFFFFF" x="985.870757" y="299.909425" width="128.999991" height="34.999996"></rect>
+                <g id="svg_52" transform="translate(988.000000, 304.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Stations">
+                        <tspan x="0.278703" y="21.222853">Stations</tspan>
+                    </text>
+                </g>
+                <g id="GTPsPerSide2" transform="translate(1083.000000, 306.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.87199" y="20.533085">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_50" stroke="#999999" fill="#FFFFFF" x="906" y="291" width="74" height="32.999996"></rect>
+                <g id="svg_49" transform="translate(908.000000, 291.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0.371994" y="21.65686">C</tspan>
+                    </text>
+                </g>
+                <g id="gtpSideCasesPerHour2" transform="translate(933.000000, 293.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.871994" y="20.533085">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_58" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="335.500001" y="389.5" width="70.999998" height="57.999996"></rect>
+                <g id="svg_60" transform="translate(333.000000, 403.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Induct">
+                        <tspan x="0.445777" y="21.330288">Induct</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_61" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(454.995367, 404.499210) rotate(-90.199500) translate(-454.995367, -404.499210) " points="448.983109 404.397802 454.995368 362.247902 461.007627 404.397802 458.001497 404.397802 458.001497 446.750519 451.989238 446.750519 451.989238 404.397802 448.983108 404.397802"></polygon>
+                <rect id="svg_62" stroke="#999999" fill="#FFFFFF" x="414.499986" y="421.000001" width="77" height="34.999996"></rect>
+                <g id="svg_63" transform="translate(421.000000, 423.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0.001221" y="21.747437">C</tspan>
+                    </text>
+                </g>
+                <g id="oneSideShuttleConveyorToInduct1" transform="translate(453.000000, 425.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.623661">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_65" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="228.500007" y="389.5" width="101.999992" height="281.99999"></rect>
+                <g id="svg_66" transform="translate(242.000000, 526.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Sorter">
+                        <tspan x="0.432274" y="21.33139">Sorter</tspan>
+                    </text>
+                </g>
+                <rect id="svg_67" stroke="#999999" fill="#FFFFFF" x="239.499987" y="557.000001" width="88" height="32.999996"></rect>
+                <g id="svg_68" transform="translate(244.000000, 558.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="U">
+                        <tspan x="0.001221" y="21.755249">U</tspan>
+                    </text>
+                </g>
+                <g id="sorterEach1" transform="translate(276.000000, 558.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.62309">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_70" stroke="#999999" fill="#FFFFFF" x="238.499987" y="604.000002" width="89" height="52.999995"></rect>
+                <g id="svg_71" transform="translate(241.000000, 604.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Chutes">
+                        <tspan x="0.001221" y="21.747437">Chutes</tspan>
+                    </text>
+                </g>
+                <g id="chutes1" transform="translate(265.000000, 625.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.62309">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_73" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="335.500001" y="491.500002" width="70.999998" height="57.999996"></rect>
+                <g id="svg_74" transform="translate(337.000000, 492.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Induct">
+                        <tspan x="0.432273" y="21.332335">Induct</tspan>
+                    </text>
+                </g>
+                <g id="svg_75" transform="translate(339.000000, 516.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="some">
+                        <tspan x="0.701034" y="21.333098">some</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_76" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(453.993810, 489.499823) rotate(-90.199500) translate(-453.993810, -489.499823) " points="447.981551 489.398415 453.99381 447.248515 460.006069 489.398415 456.999939 489.398415 456.999939 531.751132 450.98768 531.751132 450.98768 489.398415 447.98155 489.398415"></polygon>
+                <polygon id="svg_77" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(455.007959, 546.501182) rotate(89.704700) translate(-455.007959, -546.501182) " points="448.997416 546.397377 455.007959 503.251643 461.018502 546.397377 458.01323 546.397377 458.01323 589.750721 452.002687 589.750721 452.002687 546.397377 448.997415 546.397377"></polygon>
+                <rect id="svg_78" stroke="#999999" fill="#FFFFFF" x="416.499987" y="501.000001" width="74.999999" height="32.999996"></rect>
+                <g id="svg_79" transform="translate(424.000000, 503.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0.001221" y="21.755249">C</tspan>
+                    </text>
+                </g>
+                <g id="oneSideShuttleConveyorToFromInduct1" transform="translate(450.000000, 502.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.001221" y="21.47983">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_81" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="333.500001" y="612.500002" width="70.999998" height="57.999996"></rect>
+                <g id="svg_83" transform="translate(343.000000, 627.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Pack">
+                        <tspan x="0.413939" y="21.333095">Pack</tspan>
+                    </text>
+                </g>
+                <rect id="svg_84" stroke="#999999" fill="#FFFFFF" x="414" y="682" width="78" height="32.999996"></rect>
+                <g id="svg_85" transform="translate(422.000000, 684.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0.001221" y="21.747437">C</tspan>
+                    </text>
+                </g>
+                <g id="sorterCasesOut1" transform="translate(445.000000, 687.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.61289">-</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_87" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(369.630389, 706.913818) rotate(179.608000) translate(-369.630389, -706.913818) " points="363.619846 706.840237 369.630389 676.256895 375.640932 706.840237 372.63566 706.840237 372.63566 737.57074 366.625117 737.57074 366.625117 706.840237 363.619845 706.840237"></polygon>
+                <rect id="svg_115" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="991.121553" y="376.970154" width="70.999998" height="57.999996"></rect>
+                <g id="svg_114" transform="translate(997.000000, 386.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Induct">
+                        <tspan x="0.094537" y="21.354384">Induct</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_113" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" points="1136.60408 507.868112 1142.61634 465.718212 1148.6286 507.868112 1145.62247 507.868112 1145.62247 550.220829 1139.61021 550.220829 1139.61021 507.868112 1136.60408 507.868112"></polygon>
+                <rect id="svg_112" stroke="#999999" fill="#FFFFFF" x="906" y="677" width="76" height="34.999996"></rect>
+                <g id="svg_110" transform="translate(1140.000000, 490.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.62277" y="21.085522">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_109" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="1067.12156" y="376.970154" width="101.999992" height="281.99999"></rect>
+                <g id="svg_108" transform="translate(1086.000000, 510.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Sorter">
+                        <tspan x="0.51553" y="21.559995">Sorter</tspan>
+                    </text>
+                </g>
+                <rect id="svg_107" stroke="#999999" fill="#FFFFFF" x="1080.12154" y="541.470155" width="80" height="32.999996"></rect>
+                <g id="svg_106" transform="translate(1084.000000, 546.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="U">
+                        <tspan x="0.62277" y="21.225403">U</tspan>
+                    </text>
+                </g>
+                <rect id="svg_104" stroke="#999999" fill="#FFFFFF" x="1079.12154" y="590.470156" width="80" height="52.999995"></rect>
+                <g id="svg_103" transform="translate(1083.000000, 591.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Chutes">
+                        <tspan x="0.62277" y="21.21759">Chutes</tspan>
+                    </text>
+                </g>
+                <g id="sorterEach2" transform="translate(1113.000000, 546.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.12277" y="20.023358">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_101" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="991.121553" y="482.970156" width="70.999998" height="57.999996"></rect>
+                <g id="svg_100" transform="translate(997.000000, 483.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Induct">
+                        <tspan x="0.359045" y="21.08181">Induct</tspan>
+                    </text>
+                </g>
+                <g id="svg_99" transform="translate(997.000000, 508.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="some">
+                        <tspan x="0.373556" y="21.244499">some</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_98" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(940.616035, 483.969729) rotate(89.477600) translate(-940.616035, -483.969729) " points="934.603776 483.86832 940.616035 441.71842 946.628294 483.86832 943.622164 483.86832 943.622164 526.221037 937.609905 526.221037 937.609905 483.86832 934.603775 483.86832"></polygon>
+                <polygon id="svg_97" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(941.630200, 547.971265) rotate(-90.779300) translate(-941.630200, -547.971265) " points="935.619658 547.86746 941.630201 504.721726 947.640744 547.86746 944.635472 547.86746 944.635472 591.220804 938.624929 591.220804 938.624929 547.86746 935.619657 547.86746"></polygon>
+                <rect id="svg_96" stroke="#999999" fill="#FFFFFF" x="904.121539" y="417.470155" width="74" height="32.999996"></rect>
+                <g id="svg_95" transform="translate(908.000000, 420.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0.622772" y="21.225403">C</tspan>
+                    </text>
+                </g>
+                <g id="oneSideShuttleConveyorToInduct2" transform="translate(933.000000, 423.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.122772" y="20.310974">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_93" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="991.121553" y="600.970156" width="70.999998" height="57.999996"></rect>
+                <g id="svg_92" transform="translate(999.000000, 610.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Pack">
+                        <tspan x="0.780466" y="21.867945">Pack</tspan>
+                    </text>
+                </g>
+                <g id="svg_90" transform="translate(908.000000, 682.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0.622772" y="21.21759">C</tspan>
+                    </text>
+                </g>
+                <g id="chutes2" transform="translate(1112.000000, 616.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_88" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(942.258026, 397.765411) rotate(89.380400) translate(-942.258026, -397.765411) " points="936.247484 397.661843 942.258027 354.614464 948.26857 397.661843 945.263298 397.661843 945.263298 440.916358 939.252755 440.916358 939.252755 397.661843 936.247483 397.661843"></polygon>
+                <rect id="svg_91" stroke="#999999" fill="#FFFFFF" x="906" y="501" width="74.999999" height="32.999996"></rect>
+                <g id="svg_111" transform="translate(908.000000, 505.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="0.622772" y="21.21759">C</tspan>
+                    </text>
+                </g>
+                <g id="oneSideShuttleConveyorToFromInduct2" transform="translate(933.000000, 507.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.122772" y="20.419016">-</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_116" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(1029.002708, 700.540717) rotate(179.997000) translate(-1029.002708, -700.540717) " points="1022.99217 700.453935 1029.00271 664.383601 1035.01325 700.453935 1032.00798 700.453935 1032.00798 736.697833 1025.99744 736.697833 1025.99744 700.453935 1022.99217 700.453935"></polygon>
+                <g id="sorterCasesOut2" transform="translate(933.000000, 683.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.612814">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_118" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="26.999969" y="745" width="1131.00002" height="28.000001"></rect>
+                <g id="svg_119" transform="translate(509.000000, 745.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Shipping-sorter(s)">
+                        <tspan x="0.681716" y="21.308785">Shipping sorter(s)</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_120" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(415.139244, 986.761404) rotate(179.621000) translate(-415.139244, -986.761404) " points="404.639245 986.265775 415.139245 780.261402 425.639244 986.265775 420.389244 986.265775 420.389244 1193.26141 409.889245 1193.26141 409.889245 986.265775 404.639244 986.265775"></polygon>
+                <rect id="svg_121" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="548.500019" y="846.5" width="260.999991" height="34.999998"></rect>
+                <polygon id="svg_122" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(672.999298, 810.511350) rotate(179.608000) translate(-672.999298, -810.511350) " points="666.988756 810.43777 672.999299 779.854428 679.009842 810.43777 676.00457 810.43777 676.00457 841.168273 669.994027 841.168273 669.994027 810.43777 666.988755 810.43777"></polygon>
+                <g id="svg_123" transform="translate(614.000000, 853.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Ticketing">
+                        <tspan x="0" y="21">Ticketing</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_124" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(485.482384, 867.709068) rotate(-90.779300) translate(-485.482384, -867.709068) " points="479.471842 867.568065 485.482385 808.960962 491.492928 867.568065 488.487656 867.568065 488.487656 926.457174 482.477113 926.457174 482.477113 867.568065 479.471841 867.568065"></polygon>
+                <polygon id="svg_125" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(875.978587, 865.498111) rotate(88.953400) translate(-875.978587, -865.498111) " points="869.968044 865.357108 875.978587 806.750005 881.98913 865.357108 878.983858 865.357108 878.983858 924.246217 872.973315 924.246217 872.973315 865.357108 869.968043 865.357108"></polygon>
+                <polygon id="svg_126" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(942.538048, 856.032315) rotate(179.621000) translate(-942.538048, -856.032315) " points="933.035956 855.845548 942.538049 778.216978 952.040142 855.845548 947.289095 855.845548 947.289095 933.847652 937.787002 933.847652 937.787002 855.845548 933.035955 855.845548"></polygon>
+                <rect id="svg_127" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="684.500042" y="940.500007" width="602.999979" height="171.999986"></rect>
+                <rect id="svg_128" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="288" y="1204" width="260.999991" height="34.999998"></rect>
+                <g id="svg_129" transform="translate(333.000000, 1207.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="UPS-Trucks">
+                        <tspan x="0.333296" y="21.34382">UPS Trucks</tspan>
+                    </text>
+                </g>
+                <rect id="svg_130" stroke="#999999" fill="#FFFFFF" x="438" y="1141" width="115.999995" height="40"></rect>
+                <g id="svg_131" transform="translate(442.000000, 1147.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Doors">
+                        <tspan x="0" y="21">Doors</tspan>
+                    </text>
+                </g>
+                <g id="brightLoadingDoors1" transform="translate(526.000000, 1148.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.61281">-</tspan>
+                    </text>
+                </g>
+                <g id="svg_133" transform="translate(876.000000, 943.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Shipping-Buffer">
+                        <tspan x="0.164128" y="21.339674">Shipping Buffer</tspan>
+                    </text>
+                </g>
+                <rect id="svg_134" stroke="#AAD4FF" fill="#FFFFFF" x="691" y="983" width="280.999991" height="27.999999"></rect>
+                <rect id="svg_135" stroke="#AAD4FF" fill="#FFFFFF" x="691" y="1012" width="280.999991" height="30"></rect>
+                <rect id="svg_136" stroke="#AAD4FF" fill="#FFFFFF" x="691" y="1043" width="280.999991" height="27.999999"></rect>
+                <g id="svg_137" transform="translate(699.000000, 982.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Shuttle-in">
+                        <tspan x="0" y="21">Shuttle in</tspan>
+                    </text>
+                </g>
+                <g id="svg_138" transform="translate(699.000000, 1014.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Shuttle-out">
+                        <tspan x="0" y="21">Shuttle out</tspan>
+                    </text>
+                </g>
+                <g id="svg_139" transform="translate(697.000000, 1046.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Shuttle-store">
+                        <tspan x="0" y="21">Shuttle store</tspan>
+                    </text>
+                </g>
+                <g id="peakBufferDualCycles1" transform="translate(885.000000, 984.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.616518">-</tspan>
+                    </text>
+                </g>
+                <g id="peakBufferDualCycles2" transform="translate(885.000000, 1014.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.61652">-</tspan>
+                    </text>
+                </g>
+                <g id="bufferSize" transform="translate(885.000000, 1045.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.61652">-</tspan>
+                    </text>
+                </g>
+                <g id="svg_143" transform="translate(990.000000, 975.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Cartons-all-840-(l)-x-640-(w)">
+                        <tspan x="0.5" y="21.25">Cartons all 840 (l) x 640 (w)</tspan>
+                    </text>
+                </g>
+                <g id="svg_144" transform="translate(1087.000000, 1007.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="x-430-(h)">
+                        <tspan x="0.5" y="21.75">x 430 (h)</tspan>
+                    </text>
+                </g>
+                <g id="svg_145" transform="translate(990.000000, 1047.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Option-80%-@-400mm-high">
+                        <tspan x="0.5" y="21.75">Option 80% @ 400mm high</tspan>
+                    </text>
+                </g>
+                <rect id="svg_146" stroke="#999999" fill="#FFFFFF" x="970.500017" y="842.000001" width="81" height="34.999996"></rect>
+                <g id="svg_147" transform="translate(978.000000, 845.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal" stroke="#999999">
+                    <text id="C">
+                        <tspan x="-0.002228" y="21.756653">C</tspan>
+                    </text>
+                </g>
+                <g id="peakBufferDualCycles3" transform="translate(1005.000000, 846.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.50122" y="20.615895">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_151" stroke="#999999" fill="#FFFFFF" x="971" y="1141" width="115.999995" height="40"></rect>
+                <g id="svg_150" transform="translate(975.000000, 1145.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Doors">
+                        <tspan x="0" y="21">Doors</tspan>
+                    </text>
+                </g>
+                <g id="brightLoadingDoors2" transform="translate(1055.000000, 1146.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <polygon id="svg_152" stroke="#92B7DB" stroke-width="5" fill="#92B7DB" transform="translate(945.025702, 1153.510686) rotate(179.608000) translate(-945.025702, -1153.510686) " points="939.01516 1153.42751 945.025703 1118.85386 951.036246 1153.42751 948.030974 1153.42751 948.030974 1188.16752 942.020431 1188.16752 942.020431 1153.42751 939.015159 1153.42751"></polygon>
+                <rect id="svg_153" stroke="#AAD4FF" stroke-width="5" fill="#AAD4FF" x="834.499988" y="1204" width="260.999991" height="34.999998"></rect>
+                <g id="svg_154" transform="translate(886.000000, 1203.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Bright-Trucks">
+                        <tspan x="0.191768" y="21.33967">Bright Trucks</tspan>
+                    </text>
+                </g>
+                <rect id="svg_155" stroke="#999999" fill="#FFFFFF" x="798.500017" y="1121" width="81" height="34.999996"></rect>
+                <g id="svg_156" transform="translate(806.000000, 1123.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="C">
+                        <tspan x="-0.002228" y="21.74884">C</tspan>
+                    </text>
+                </g>
+                <g id="peakBufferDualCycles4" transform="translate(831.000000, 1127.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0.501221" y="20.61194">-</tspan>
+                    </text>
+                </g>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1213.50007" y="358.500001" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1213" y="399" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="440" width="475" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1213" y="480" width="477" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="521" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="561" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="603" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="644" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="685" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="725" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="764" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="803" width="476" height="34.999996"></rect>
+                <rect id="svg_159" stroke="#999999" fill="#FFFFFF" x="1214" y="844" width="476" height="34.999996"></rect>
+                <rect id="svg_160" stroke="#999999" fill="#FFFFFF" x="1213.50007" y="158.499997" width="476" height="35"></rect>
+                <rect id="svg_162" stroke="#999999" fill="#FFFFFF" x="1213.50007" y="318.500001" width="476" height="34.999996"></rect>
+                <rect id="svg_163" stroke="#999999" fill="#FFFFFF" x="1213.50007" y="278.500001" width="476" height="34.999996"></rect>
+                <rect id="svg_164" stroke="#999999" fill="#FFFFFF" x="1213.50007" y="238.500001" width="476" height="34.999996"></rect>
+                <polygon id="svg_165" stroke="#999999" fill="#FFFFFF" points="1213.50007 197.500001 1689.50007 197.500001 1689.50007 216.277866 1689.50007 232.499997 1213.50007 232.499997"></polygon>
+                <g id="Max-Weekly-AP" transform="translate(1227.000000, 161.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21.973418">Max Weekly AP</tspan>
+                    </text>
+                </g>
+                <g id="svg_167" transform="translate(1226.000000, 202.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Growth">
+                        <tspan x="0" y="21">Growth</tspan>
+                    </text>
+                </g>
+                <g id="Weekly-Hours" transform="translate(1227.000000, 242.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21.973418">Weekly Hours</tspan>
+                    </text>
+                </g>
+                <g id="svg_169" transform="translate(1227.000000, 280.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Hour-Surge">
+                        <tspan x="0" y="21.973418">Hour Surge</tspan>
+                    </text>
+                </g>
+                <g id="svg_170" transform="translate(1225.000000, 324.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Units-Per-Hour">
+                        <tspan x="0" y="21.973418">Units Per Hour</tspan>
+                    </text>
+                </g>
+                <g id="svg_171" transform="translate(1227.000000, 362.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Side-Imbalance">
+                        <tspan x="0" y="21">Side Imbalance</tspan>
+                    </text>
+                </g>
+                <g id="Ecomm-hours" transform="translate(1227.000000, 444.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21">Ecomm hours</tspan>
+                    </text>
+                </g>
+                <g id="Rate-per-GTP" transform="translate(1226.000000, 525.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21">Rate per GTP</tspan>
+                    </text>
+                </g>
+                <g id="Average-week-AP" transform="translate(1227.000000, 565.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21">Average week AP</tspan>
+                    </text>
+                </g>
+                <g id="Receiving-peak-to-av" transform="translate(1227.000000, 606.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Receiving-peak-to-avg">
+                        <tspan x="0" y="21">Receiving peak to avg</tspan>
+                    </text>
+                </g>
+                <g id="Peak-non-weekend-uni" transform="translate(1227.000000, 404.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Peak-non-weekend-units-ordered">
+                        <tspan x="0" y="21">Peak non weekend units ordered</tspan>
+                    </text>
+                </g>
+                <g id="Units-per-case" transform="translate(1226.000000, 649.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21">Units per case</tspan>
+                    </text>
+                </g>
+                <g id="Units-per-shuttle-ou" transform="translate(1226.000000, 689.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Units-per-shuttle-out-move">
+                        <tspan x="0" y="21">Units per shuttle out move</tspan>
+                    </text>
+                </g>
+                <g id="Units-per-shuttle-in" transform="translate(1225.000000, 730.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Units-per-shuttle-in-move">
+                        <tspan x="0" y="21">Units per shuttle in move</tspan>
+                    </text>
+                </g>
+                <g id="%-to-buffer" transform="translate(1226.000000, 769.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21">% to buffer</tspan>
+                    </text>
+                </g>
+                <g id="%-of-week-in-buffer" transform="translate(1225.000000, 807.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21">% of week in buffer</tspan>
+                    </text>
+                </g>
+                <g id="Peak-cases-per-week" transform="translate(1225.000000, 847.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text id="Peak-cases-per-week-relay">
+                        <tspan x="0" y="21">Peak cases per week relay</tspan>
+                    </text>
+                </g>
+                <g id="Ecomm-growth" transform="translate(1225.000000, 481.000000)" fill="#000000" font-family="Helvetica" font-size="22" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="21.973418">Ecomm growth</tspan>
+                    </text>
+                </g>
+                <g id="peakWeekAP" transform="translate(1618.000000, 164.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="growth" transform="translate(1618.000000, 203.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="weeklyHours" transform="translate(1618.000000, 244.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="hourlySurge" transform="translate(1617.000000, 281.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="unitsPerHour" transform="translate(1618.000000, 324.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="sideImbalance" transform="translate(1618.000000, 362.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="peakNonWeekendUnitsOrdered" transform="translate(1618.000000, 402.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="ecommHours" transform="translate(1618.000000, 440.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="ecommGrowth" transform="translate(1618.000000, 483.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="ratePerGTP" transform="translate(1617.000000, 522.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="averageWeekAP" transform="translate(1617.000000, 566.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="receivingPeakToAvg" transform="translate(1617.000000, 605.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="unitsPerCase" transform="translate(1617.000000, 648.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="unitsPerShuttleOutMove" transform="translate(1617.000000, 687.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="unitsPerShuttleInMove" transform="translate(1617.000000, 729.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="percentToBuffer" transform="translate(1617.000000, 767.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="percentOfWeekInBuffer" transform="translate(1617.000000, 806.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+                <g id="peakCasesPerWeekRelay" transform="translate(1618.000000, 848.000000)" fill="#000000" font-family="Helvetica" font-size="21" font-weight="normal">
+                    <text id="-">
+                        <tspan x="0" y="20">-</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

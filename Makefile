@@ -4,6 +4,9 @@ install:
 server:
 	node src/server/runServer.js
 
+calc:
+	node src/server/phases/calculations.js
+
 publish:
 	npm publish --dry-run
 

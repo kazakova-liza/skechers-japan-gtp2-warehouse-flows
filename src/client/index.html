@@ -19,24 +19,24 @@
   <button onclick="onStopClick()" id='stop' disabled> stop </button>
   <br>
   <br>
-  <label for="numberOfDays">Number of days:</label>
+  <label for="numberOfDays">Number of periods:</label>
   <input type="number" id="numberOfPeriods" name="numberOfPeriods" min="1" max="300">
   <button onclick="onJumpClick()" id='jump' disabled> jump </button>
   <br>
   <br>
   <button onclick="onPhaseClick()" id='phase++' disabled> phase++ </button>
   <button onclick="onPeriodClick()" id='period++' disabled> period++ </button>
-  <button onclick="onExecutePeriodClick()" id='execute period' disabled> execute period </button>
+  <!-- <button onclick="onExecutePeriodClick()" id='execute period' disabled> execute period </button> -->
   <br>
   <br>
   <label for="mySQLTable"> Save data to the table: </label>
   <textarea id="mySQLTable" name="mySQLTable" rows="1" cols="20"> </textarea>
   <button onclick="onDumpClick()" id='dump' disabled> dump </button>
   <br>
-  <p style="Text-align:left;float:left"> Period: </p>
+  <p style="Text-align:left;float:left"> Period: &nbsp </p>
   <p id='period'> </p>
   <br>
-  <p style="Text-align:left;float:left"> Phase: </p>
+  <p style="Text-align:left;float:left"> Phase: &nbsp</p>
   <p id='phase'> </p>
 
   <object type="image/svg+xml" data="http://localhost:9615/src/client/drawSVG.svg" id="svg1"

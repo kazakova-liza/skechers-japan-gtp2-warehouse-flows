@@ -3,22 +3,10 @@ import cache from './cache.js';
 import objects from './objects.js'
 
 
-cache.cases = [];
-cache.slowPairs = [];
-
-const blankOne = () => {
-    const svgUpdate = [];
-
-    svgUpdate.push({ id: 'zzzzz', value: 999 });
-
-    return svgUpdate;
-}
-
 const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => {
     const t1 = Date.now();
-    const dtes = groupBy(cache.ords, ['dte'], [], []);
+    const dtes = objects.periods;
     console.log('dtes = ', dtes.length);
-    dtes.sort((a, b) => a.dte.getTime() - b.dte.getTime());
 
     for (let i = cache.currentPeriod; i < cache.currentPeriod + parseInt(numberOfPeriodsToExecute); i++) {
         cache.thisDte = dtes[i].dte;
@@ -28,7 +16,7 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
             payload:
                 [{
                     id: 'period',
-                    value: dtes[i].dte.toDateString()
+                    value: dtes[i]
                 }]
         }));
         if (phase === 'all') {
