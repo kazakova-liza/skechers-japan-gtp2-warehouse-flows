@@ -1,24 +1,151 @@
 import calculate from './phases/calculations.js'
 
 const objects = {
-    inputs: [
-        {
-            name: "Variables table",
-            type: "text"
-        },
-    ],
+    inputs: [],
     phases: [
         {
             number: 1,
-            name: 'calculations',
+            name: '1',
             function: calculate,
-            textOnProcessing: "calculating variables",
-            textOnCompletion: "variables calculated",
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
             async: false,
             svgTransitionElementId: undefined,
-        }
+            svgShowOnTransitionId: 'phase_1'
+        },
+        {
+            number: 2,
+            name: '2',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: 'phase_2'
+        },
+        {
+            number: 3,
+            name: '3',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: 'phase_3'
+        },
+        {
+            number: 4,
+            name: '4',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: 'phase_4'
+        },
+        {
+            number: 5,
+            name: '5',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_5',
+        },
+        {
+            number: 6,
+            name: '6',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_6',
+        },
+        {
+            number: 7,
+            name: '7',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_7',
+        },
+        {
+            number: 8,
+            name: '8',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_8',
+        },
+        {
+            number: 9,
+            name: '9',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_9',
+        },
+        {
+            number: 10,
+            name: '10',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_10',
+        },
+        {
+            number: 11,
+            name: '11',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_11',
+        },
+        {
+            number: 12,
+            name: '12',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_12',
+        },
+        {
+            number: 13,
+            name: '13',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_13',
+        },
+        {
+            number: 14,
+            name: '14',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_14',
+        },
+        {
+            number: 15,
+            name: '15',
+            function: calculate,
+            textOnProcessing: "processing",
+            textOnCompletion: "finished",
+            async: false,
+            svgShowOnTransitionId: 'phase_15',
+        },
+
+
     ],
-    periods: [1, 2, 3, 4, 5, 6, 7]
+    periods: [1]
 }
 
 export default objects;

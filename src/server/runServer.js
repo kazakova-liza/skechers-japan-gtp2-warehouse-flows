@@ -106,9 +106,11 @@ const main = async () => {
                 const phase1 = objects.phases.find((phase) => phase.number === 1);
                 const svgUpdate = [{ id: 'phase', value: phase1.textOnProcessing }];
                 cache.connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: svgUpdate }));
-                cache.table = command.payload.table;
-                cache.daysbeforeArchiveToSlow = command.payload.moveToSlow;
-                cache.ords = await executeQuery('getData', cache.table);
+                if (command.payload !== undefined) {
+                    cache.table = command.payload.table;
+                    cache.daysbeforeArchiveToSlow = command.payload.moveToSlow;
+                    cache.ords = await executeQuery('getData', cache.table);
+                }
                 await execute(numberOfPeriodsToExecute);
                 cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }

@@ -1,26 +1,53 @@
 let dataForTable = [];
 let dates = [];
+let JSONtable;
+
+const disableButtons = (buttonName) => {
+    const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
+    if (buttonName === 'all') {
+        for (const button of buttons) {
+            document.getElementById(button).disabled = true;
+        }
+    }
+    else {
+        document.getElementById(buttonName).disabled = true;
+    }
+}
+
+const enableButtons = (buttonName) => {
+    const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
+    if (buttonName === 'all') {
+        for (const button of buttons) {
+            document.getElementById(button).disabled = false;
+        }
+    }
+    else {
+        document.getElementById(buttonName).disabled = false;
+    }
+}
 
 const onStartClick = () => {
-    const table = document.getElementById('Variables table').value;
-
-    const command = {
-        topic: 'start',
-        payload: {
-            table,
-        }
-    };
+    let command;
+    if (document.getElementById('Variables table') === null) {
+        command = {
+            topic: 'start',
+        };
+    }
+    else {
+        const mySqlTable = document.getElementById('Variables table').value;
+        command = {
+            topic: 'start',
+            payload: {
+                mySqlTable,
+            }
+        };
+    }
     ws.send(JSON.stringify(command));
-    document.getElementById('start').disabled = true;
+    disableButtons('start');
 };
 
 const onJumpClick = () => {
-    document.getElementById('period++').disabled = true;
-    document.getElementById('phase++').disabled = true;
-    // document.getElementById('execute period').disabled = true;
-    document.getElementById('jump').disabled = true;
-    document.getElementById('dump').disabled = true;
-    document.getElementById('start').disabled = true;
+    disableButtons('all');
     const numberOfPeriods = document.getElementById('numberOfPeriods').value;
     const command = {
         topic: 'jump',
@@ -64,19 +91,6 @@ const json2Table = (json) => {
     return table;
 }
 
-// const onExecutePeriodClick = () => {
-//     document.getElementById('period++').disabled = true;
-//     document.getElementById('phase++').disabled = true;
-//     document.getElementById('execute period').disabled = true;
-//     document.getElementById('jump').disabled = true;
-//     document.getElementById('dump').disabled = true;
-//     document.getElementById('start').disabled = true;
-//     const command = {
-//         topic: 'execute period',
-//     };
-//     ws.send(JSON.stringify(command));
-// };
-
 const onStopClick = () => {
     const command = {
         topic: 'stop',
@@ -85,12 +99,7 @@ const onStopClick = () => {
 };
 
 const onPhaseClick = () => {
-    document.getElementById('period++').disabled = true;
-    document.getElementById('phase++').disabled = true;
-    // document.getElementById('execute period').disabled = true;
-    document.getElementById('jump').disabled = true;
-    document.getElementById('dump').disabled = true;
-    document.getElementById('start').disabled = true;
+    disableButtons('all');
     const command = {
         topic: 'phase++',
     };
@@ -99,12 +108,7 @@ const onPhaseClick = () => {
 };
 
 const onPeriodClick = () => {
-    document.getElementById('period++').disabled = true;
-    document.getElementById('phase++').disabled = true;
-    // document.getElementById('execute period').disabled = true;
-    document.getElementById('jump').disabled = true;
-    document.getElementById('dump').disabled = true;
-    document.getElementById('start').disabled = true;
+    disableButtons('all');
     const command = {
         topic: 'period++',
     };
@@ -128,7 +132,10 @@ document.getElementById('svg1').addEventListener('load', function () {
     panZoom.resize();
 })
 
-const table = document.getElementById('table');
+
+if (document.getElementById('table') !== undefined) {
+    JSONtable = document.getElementById('table');
+}
 
 const ws = new WebSocket('ws://localhost:9615/');
 ws.onopen = function () {
@@ -153,29 +160,18 @@ ws.onmessage = function (e) {
     }
 
     if (message.topic == 'disableButtons') {
-        document.getElementById('period++').disabled = true;
-        document.getElementById('phase++').disabled = true;
-        // document.getElementById('execute period').disabled = true;
-        document.getElementById('jump').disabled = true;
-        document.getElementById('dump').disabled = true;
-        document.getElementById('start').disabled = true;
+        disableButtons('all');
     }
 
     if (message.topic == 'enableButtons') {
-        document.getElementById('period++').disabled = false;
-        document.getElementById('phase++').disabled = false;
-        // document.getElementById('execute period').disabled = false;
-        document.getElementById('jump').disabled = false;
-        document.getElementById('dump').disabled = false;
-        document.getElementById('start').disabled = false;
+        enableButtons('all');
     }
 
     if (message.topic == 'variablesUpdate') {
         console.log(message);
         for (element of message.payload) {
-            console.log(element);
-            const a = document.getElementById('svg1');
-            const svgDoc = a.contentDocument;
+            const svgObject = document.getElementById('svg1');
+            const svgDoc = svgObject.contentDocument;
             const el = svgDoc.getElementById(element.id);
             if (el.getElementsByTagName('tspan') !== undefined) {
                 const tspans = el.getElementsByTagName('tspan');
@@ -209,10 +205,22 @@ ws.onmessage = function (e) {
         }
     }
 
+    if (message.topic == 'transitionUpdate') {
+        console.log(message);
+        for (element of message.payload) {
+            const svgObject = document.getElementById('svg1');
+            const svgDoc = svgObject.contentDocument;
+            const el = svgDoc.getElementById(element.id);
+            console.log(el);
+            console.log(element.id)
+            el.style.visibility = 'visible';
+        }
+    }
+
     if (message.topic == 'setToNought') {
         console.log(message);
-        const a = document.getElementById('svg1');
-        const svgDoc = a.contentDocument;
+        const svgObject = document.getElementById('svg1');
+        const svgDoc = svgObject.contentDocument;
         const elements = svgDoc.getElementsByClassName('variable');
         for (const element of elements) {
             element.textContent = '-';
@@ -230,8 +238,8 @@ ws.onmessage = function (e) {
 
     if (message.topic === 'svgUpdate') {
         console.log(message);
-        const a = document.getElementById('svg1');
-        const svgDoc = a.contentDocument;
+        const svgObject = document.getElementById('svg1');
+        const svgDoc = svgObject.contentDocument;
         const elementToUpdate = svgDoc.getElementById(message.payload.id);
         console.log(elementToUpdate);
         elementToUpdate.style.fill = message.payload.color;
