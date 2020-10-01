@@ -1,62 +1,10 @@
-import http from 'http';
-import url from 'url';
-import fs from 'fs';
-import path from 'path';
-import websocket from 'websocket';
 import objects from './objects.js';
 import executeQuery from './sql/executeQuery.js';
 import execute from './execute.js';
 import cache from './cache.js';
+import runWebSocketServer from './server.js';
 
-const port = 9615;
-const baseDirectory = path.resolve();
-
-const runHttpServer = () => {
-    const server = http.createServer((request, response) => {
-        try {
-            const requestUrl = url.parse(request.url);
-            let normalizedPath = path.normalize(requestUrl.pathname);
-            //  if (normalizedPath.includes('index.html') || normalizedPath === '\\') {
-            //      normalizedPath = '//src//client//index.html';
-            //  }
-            if (normalizedPath.includes('index.html') || normalizedPath === '/') {
-                normalizedPath = '/src/client/index.html';
-            }
-            if (normalizedPath.includes('.svg')) {
-                response.setHeader('Content-Type', 'image/svg+xml');
-            }
-            const fsPath = `${baseDirectory}${normalizedPath}`;
-            console.log(fsPath);
-            const fileStream = fs.createReadStream(fsPath);
-            fileStream.pipe(response);
-            fileStream.on('open', () => {
-                response.writeHead(200);
-            });
-            fileStream.on('error', (e) => {
-                console.log(normalizedPath);
-                response.writeHead(404); // assume the file doesn't exist
-                response.end();
-            });
-        } catch (e) {
-            response.writeHead(500);
-            response.end(); // end the response so browsers don't hang
-            console.log(e.stack);
-        }
-    }).listen(port);
-    console.log(`listening on port ${port}`);
-    return server;
-};
-
-const runWebSocketServer = () => {
-    const server = runHttpServer();
-    const wsServer = new websocket.server({
-        httpServer: server,
-    });
-    return wsServer;
-};
-
-
-const main = async () => {
+const runServer = async () => {
     const wsServer = runWebSocketServer();
 
     wsServer.on('request', async (request) => {
@@ -66,7 +14,7 @@ const main = async () => {
             console.log('Received Message:', message.utf8Data);
 
             let command;
-            let numberOfPeriodsToExecute;
+            let numberOfPeriodsToExecute = 1;
             let phases = [];
 
             for (const phase of objects.phases) {
@@ -82,63 +30,74 @@ const main = async () => {
                 console.log('Command is not a JSON, skipping');
                 return;
             }
-            // if (command.topic === 'stop') { }
+            cache.connection.sendUTF(JSON.stringify({
+                topic: 'disableButtons',
+                payload: 'all'
+            }));
             if (command.topic === 'inputs') {
-                cache.connection.sendUTF(JSON.stringify({ topic: 'inputs', payload: objects.inputs }));
+                cache.connection.sendUTF(JSON.stringify({
+                    topic: 'inputs',
+                    payload: objects.inputs
+                }));
+                cache.connection.sendUTF(JSON.stringify({
+                    topic: 'enableButtons',
+                    payload: 'start'
+                }));
             }
             if (command.topic === 'jump') {
-                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
                 if (cache.currentPhase < maxPhase) {
-                    numberOfPeriodsToExecute = 1;
+
                     await execute(numberOfPeriodsToExecute, 'all');
                 }
                 cache.currentPeriod++;
                 numberOfPeriodsToExecute = command.payload;
                 await execute(numberOfPeriodsToExecute, 'all');
                 cache.currentPeriod = cache.currentPeriod + numberOfPeriodsToExecute - 1;
-                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'start') {
-                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
-                numberOfPeriodsToExecute = 1;
                 cache.currentPhase = 1;
                 cache.currentPeriod = 0;
                 const phase1 = objects.phases.find((phase) => phase.number === 1);
-                const svgUpdate = [{ id: 'phase', value: phase1.textOnProcessing }];
-                cache.connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: svgUpdate }));
+                const htmlUpdate = [{
+                    id: 'phase',
+                    value: phase1.textOnProcessing
+                }];
+                cache.connection.sendUTF(JSON.stringify({
+                    topic: 'htmlUpdate',
+                    payload: htmlUpdate
+                }));
                 if (command.payload !== undefined) {
                     cache.table = command.payload.table;
                     cache.daysbeforeArchiveToSlow = command.payload.moveToSlow;
                     cache.ords = await executeQuery('getData', cache.table);
                 }
                 await execute(numberOfPeriodsToExecute);
-                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'phase++') {
-                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
-                numberOfPeriodsToExecute = 1;
                 cache.currentPhase++;
                 await execute(numberOfPeriodsToExecute);
-                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'period++') {
-                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
                 cache.currentPhase = 1;
-                numberOfPeriodsToExecute = 1;
                 cache.currentPeriod++;
-                cache.connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
+                cache.connection.sendUTF(JSON.stringify({
+                    topic: 'setToNought'
+                }));
                 await execute(numberOfPeriodsToExecute);
-                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'execute period') {
-                cache.connection.sendUTF(JSON.stringify({ topic: 'disableButtons' }));
-                numberOfPeriodsToExecute = 1;
                 await execute(numberOfPeriodsToExecute, 'all');
-                cache.connection.sendUTF(JSON.stringify({ topic: 'enableButtons' }));
             }
             if (command.topic === 'dump') {
                 await executeQuery('write', command.payload);
             }
+            if (command.topic !== 'inputs') {
+                cache.connection.sendUTF(JSON.stringify({
+                    topic: 'enableButtons',
+                    payload: 'all'
+                }));
+            }
+
         });
 
         cache.connection.on('close', (reasonCode, description) => {
@@ -148,4 +107,4 @@ const main = async () => {
     });
 };
 
-main();
+runServer();

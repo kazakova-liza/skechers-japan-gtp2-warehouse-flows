@@ -137,6 +137,13 @@ if (document.getElementById('table') !== undefined) {
     JSONtable = document.getElementById('table');
 }
 
+// if (svgDoc.getElementById('phases') !== null) {
+//     const phases = svgDoc.getElementById('phases').childNodes;
+//     for (const phase of phases) {
+//         phase.style.visibility = 'hidden';
+//     }
+// }
+
 const ws = new WebSocket('ws://localhost:9615/');
 ws.onopen = function () {
     console.log('WebSocket Client Connected');
@@ -145,6 +152,7 @@ ws.onopen = function () {
     };
     ws.send(JSON.stringify(command));
 };
+
 
 ws.onmessage = function (e) {
     message = JSON.parse(e.data);
@@ -160,11 +168,11 @@ ws.onmessage = function (e) {
     }
 
     if (message.topic == 'disableButtons') {
-        disableButtons('all');
+        disableButtons(message.payload);
     }
 
     if (message.topic == 'enableButtons') {
-        enableButtons('all');
+        enableButtons(message.payload);
     }
 
     if (message.topic == 'variablesUpdate') {

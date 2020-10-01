@@ -1,7 +1,7 @@
 import connectToDatabase from './workWithSQL.js'
 import _ from 'lodash'
 import cache from '../cache.js'
-import { get } from './queries.js'
+import { get, truncate, write } from './queries.js'
 
 
 const executeQuery = async (action, tableName) => {
