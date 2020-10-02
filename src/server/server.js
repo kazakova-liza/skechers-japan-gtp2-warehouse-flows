@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import websocket from 'websocket';
 
-const port = 9615;
+const port = 50001;
 const baseDirectory = path.resolve();
 
 const runHttpServer = () => {
