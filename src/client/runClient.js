@@ -144,7 +144,7 @@ if (document.getElementById('table') !== undefined) {
 //     }
 // }
 
-const ws = new WebSocket('ws://localhost:9615/');
+const ws = new WebSocket('ws://localhost:50001/');
 ws.onopen = function () {
     console.log('WebSocket Client Connected');
     const command = {
