@@ -232,6 +232,24 @@ const objects = {
             async: false,
             svgShowOnTransitionId: 'phase_25',
         },
+        {
+            number: 26,
+            name: '26',
+            function: calculate,
+            textOnProcessing: 26,
+            textOnCompletion: 26,
+            async: false,
+            svgShowOnTransitionId: 'phase_26',
+        },
+        {
+            number: 27,
+            name: '27',
+            function: calculate,
+            textOnProcessing: 27,
+            textOnCompletion: 27,
+            async: false,
+            svgShowOnTransitionId: 'phase_27',
+        },
 
 
 
